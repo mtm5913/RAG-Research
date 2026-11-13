@@ -12,7 +12,7 @@ Create a separate `RAG-Research` repository and enable Pages with GitHub Actions
 
 ## Status
 
-Plan draft. Corpus, architecture selection, personal learning notes, real peer review and app experiments remain pending. AI drafted initial content; verify claims and add actual evidence.
+Plan draft. Corpus, architecture selection, personal learning notes and learning exercises remain pending. AI drafted initial content; verify claims and add actual evidence.
 
 ## Verification — November 13, 2026
 
