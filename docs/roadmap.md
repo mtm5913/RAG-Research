@@ -20,10 +20,6 @@ Describe what each stores and how it finds evidence. Use a small example to comp
 
 Prepare an exact-term question, a paraphrase, and a question the source cannot answer. Inspect supporting passages and record actual observations when the exercise runs.
 
-## 6. Review and reflect
-
-Ask a partner to review an explanation or source trace. Record their question, my response, any revision, and what I checked afterward.
-
 ## Decisions for later
 
 Application topic, corpus, implementation framework, database, embedding model, generation provider, hosting, and budget are undecided. Research these when a concrete experiment needs them.
