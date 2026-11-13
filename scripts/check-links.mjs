@@ -1,0 +1,5 @@
+import {readdir,readFile,stat} from 'node:fs/promises'
+import path from 'node:path'
+const root=path.resolve('docs/.vitepress/dist'); let failures=[];let checked=0
+async function walk(dir){for(const e of await readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())await walk(p);else if(e.name.endsWith('.html')){const html=await readFile(p,'utf8');for(const m of html.matchAll(/(?:href|src)="([^"#]+)(?:#[^"]*)?"/g)){let u=m[1].split('?')[0];if(/^(?:https?:|mailto:|data:|tel:)/.test(u))continue;if(u.startsWith('/RAG-Research/'))u=u.slice('/RAG-Research/'.length);else if(u.startsWith('/'))continue;else u=path.relative(root,path.resolve(path.dirname(p),u));let target=path.join(root,decodeURIComponent(u));try{if((await stat(target)).isDirectory())target=path.join(target,'index.html');await stat(target);checked++}catch{failures.push(path.relative(root,p)+' → '+m[1])}}}}}
+await walk(root);if(failures.length){console.error(failures.join('\n'));process.exit(1)}console.log(`Verified ${checked} internal links/assets.`)
