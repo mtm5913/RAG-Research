@@ -1,6 +1,6 @@
 # Research & comparisons
 
-**Initial draft explanations and proposed comparisons.** Add your own understanding and source-specific notes as you work through the readings.
+**Research notebook:** includes Megan’s source-specific reading notes below, alongside AI-assisted explanations and proposed comparisons. No retrieval experiments have been executed.
 
 ## How content becomes evidence
 
@@ -37,6 +37,33 @@ Learning source: [Neo4j’s graph database introduction](https://neo4j.com/docs/
 
 Keep a source manifest, parse text, normalize formatting, detect duplicate documents, and retain source locations. Reimport should update stable document records rather than silently duplicate content. Import/admin permissions must be checked on the server.
 
-## My learning notes — to complete
+## My notes: vector and graph RAG
+
+**Recorded November 14, 2026.** Megan supplied the notes; AI organized them and separated technical clarifications. Source: [Meilisearch’s comparison guide](https://www.meilisearch.com/blog/graph-rag-vs-vector-rag), especially its definitions, pipeline descriptions, and comparison sections. These notes document reading, not a tested implementation.
+
+### My understanding from the reading
+
+- **Vector:** chunks are represented numerically as embeddings. A question is also embedded, similar representations help locate relevant passages, and those passages provide context for an LLM answer. I think of this as the “math of meaning.”
+- **Graph:** nodes represent entities, edges describe connections, and nodes can carry several properties. A schema defines allowed types and relationships; entity recognition and resolution can help organize imported information. Connected facts and their sources can provide answer context.
+- **Main difference:** vector retrieval searches by similarity, while graph retrieval follows explicit relationships. I see vector retrieval as a candidate for unstructured text and graph retrieval as a candidate when questions require connecting facts.
+
+### Technical clarifications to my original notes
+
+1. **Chunking and embedding are separate steps.** A chunker splits text; an embedding model produces numerical representations. Store the text and source metadata alongside vectors.
+2. **Graph distance is not automatically semantic similarity.** A hop counts a relationship traversed. What that connection means depends on the relationship type; nearby nodes are not necessarily similar in meaning.
+3. **Graph retrieval does not inherently require query embeddings.** The article illustrates a pipeline that includes embeddings, entity linking, bounded traversal, ranking, and compression. This is one design, not a required sequence for every graph system.
+4. **Neither approach guarantees correct answers.** Source quality, extraction, retrieval, and generation still require checks. Claims that vector setup is simpler or graph retrieval supports more complex connections need evaluation against this project’s questions.
+
+Graph-model cross-check: [Neo4j’s graph database introduction](https://neo4j.com/docs/getting-started/graph-database/) describes nodes, relationships, and properties. AI supplied these clarifications; Megan’s confirmation of the revised explanation is pending.
+
+### What this suggests for my photography project
+
+**AI-assisted interpretation, awaiting Megan’s decision:** EOS R1 manual passages may suit vector retrieval for differently worded questions about landscapes and low light. A graph could explicitly connect settings, effects, and shooting conditions, but would require a checked schema and supporting passages. Neither architecture nor database has been chosen; compare tools and actual questions before deciding.
+
+### What I still need to check
+
+Try the same questions with a keyword baseline and the selected approach; inspect retrieved source locations, missing context, and unsupported claims. Reading a comparison does not establish speed or accuracy for my app.
+
+## Further learning notes
 
 For each reading: concept in my own words; small illustrative example; source section; assumption; remaining question; decision it changes. Keep tutorials that teach the system separate from content that the app answers questions about.

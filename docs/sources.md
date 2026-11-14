@@ -35,6 +35,16 @@ The repository provides a VitePress documentation site with draft architecture, 
 
 **Source check:** AI inspected the repository README on November 13, 2026. No application code or benchmarks were executed.
 
+## Article I used: vector and graph RAG
+
+[GraphRAG vs. Vector RAG: side-by-side comparison guide — Meilisearch](https://www.meilisearch.com/blog/graph-rag-vs-vector-rag)
+
+**Author:** Maya Shin. **Published:** October 21, 2025; updated August 25, 2026. **Used for:** comparing representation, retrieval, and implementation tradeoffs. **Status:** Megan supplied reading notes on November 14, 2026; AI checked the article and identified qualifications. These are reading notes, not experimental results.
+
+[Read my notes and technical clarifications](./research.md#my-notes-vector-and-graph-rag).
+
+This is a vendor-authored overview. Its speed, accuracy, and product comparisons are claims to investigate, not measured results for this project.
+
 ## Tutorials I used
 
 These are the tutorials I used while learning about RAG. Dates, personal takeaways, and related project decisions still need to be added.
