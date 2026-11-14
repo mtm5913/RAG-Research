@@ -56,20 +56,31 @@ These are the tutorials I used while learning about RAG. Dates, personal takeawa
 | [YouTube tutorial 3](https://youtu.be/xU8CeMhQt1c?si=si3iAS2teJPkc41V) | Used |
 | [YouTube tutorial 4](https://youtu.be/cCD303XsUjI?si=uTdJznzy5v2eN-jL) | Used |
 
-## Corpus manifest — not yet selected
+## Photography source plan
 
-For a future retrieval exercise, choose a small set of permitted documents on a topic still to be selected. The course suggests approximately five short documents. Public accessibility alone does not establish permission.
+**Selected for research on November 14, 2026:** one EOS R1 manual and four supplementary guides. These are proposed corpus documents, not an imported or fully permission-cleared collection. The RAG-learning resources above teach implementation; the photography documents below would supply answers.
 
-For every selected document, record:
+| ID | Document / publisher | Intended coverage | Permission and import status |
+| --- | --- | --- | --- |
+| PHOTO-01 | [EOS R1 Advanced User Guide — Canon](https://cam.start.canon/en/C018/index.html) | R1-specific controls and limitations. Proposed scope: whole manual, with sections preserved. | Manual listed on official support site; exact edition and import permission pending. Not imported. |
+| PHOTO-02 | [Landscape Photography 101 — Canon New Zealand](https://www.canon.co.nz/get-inspired/landscape-photography-tips) | Aperture priority, depth of field, exposure compensation, ISO and tripod use. | Linked research reference; no public-RAG import authorization recorded. Not imported. |
+| PHOTO-03 | [6 Simple Low Light Photography Tips — Canon New Zealand](https://www.canon.co.nz/get-inspired/6-low-light-photography-tips) | Aperture, shutter speed, ISO, focusing and camera shake; handheld and tripod contexts. | Linked research reference; no public-RAG import authorization recorded. Not imported. |
+| PHOTO-04 | [Canon Explains Exposure: Basic Manual Settings — Canon Canada](https://www.canon.ca/CanonOutsideOfAuto/learn) | Basic aperture, shutter speed, ISO and exposure-meter explanations. | Linked research reference; import permission pending. Not imported. |
+| PHOTO-05 | [How to Photograph Acadia’s Night Skies — National Park Service](https://home.nps.gov/articles/000/night-skies-photography-acadia.htm) | Tripod-based night scenes, manual focus, long exposures and experimental starting settings. | NPS-created material is generally public domain, with exceptions. Verify text authorship and exclude third-party images before import. Not imported. |
 
-- Stable document ID and title.
-- Original URL, publisher, version/publication date and access date.
-- Permission or license and any attribution requirement.
-- Included sections and excluded sensitive content.
-- Import date, parser/cleaning choices and duplicate handling.
-- Stable chunk IDs or graph facts with supporting passage locations.
+### Source checks and limitations
 
-**Current corpus count verified in this notebook: 0.** Add the five real entries after inspecting them; no placeholder source is presented as imported content.
+- AI inspected the linked guidance on November 14, 2026. This establishes relevance and availability, not Megan’s completion of each reading or an executed retrieval test.
+- PHOTO-05 displays an update date of October 14, 2021. Stable publication/version dates for PHOTO-02–04 have not been established; save dated source snapshots if import is authorized.
+- The [Canon New Zealand terms](https://www.canon.co.nz/terms-of-use) and [NPS ownership policy](https://home.nps.gov/aboutus/disclaimer.htm) are permission-review references. Public access is not itself a reuse license. Record the applicable permission before copying content into an index or public download.
+- Only PHOTO-01 establishes EOS R1-specific operations. The supplementary guides may discuss other cameras or general techniques; do not relabel their examples as tested R1 settings.
+- Treat settings as conditional starting points, not universal recipes. Preserve the scene, lens, stability and motion context around any recommendation. Check simplified explanations against the manual and supporting technical sources.
+
+### Proposed import record
+
+For each authorized source, retain document ID, title, publisher, original URL, edition/update date, access date, permission evidence, included sections and stable source locations. Extract article text rather than navigation, advertisements or photographs. Keep heading paths and passage IDs through cleaning and chunking; record duplicate handling, parser configuration, import date and embedding configuration when actually run.
+
+**Status:** five candidate documents identified; zero documents imported. Permission clearance and the manual’s edition remain open.
 
 ## Tutorial notes — template
 

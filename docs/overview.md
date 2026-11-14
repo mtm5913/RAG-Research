@@ -6,14 +6,14 @@
 
 | Evidence | Where to find it | Status |
 | --- | --- | --- |
-| Vector, graph, chunking, embeddings and import | [Research & comparisons](./research.md) | Initial AI-assisted explanation; personal research notes pending |
-| Learning sources and corpus permissions | [Sources & tutorials](./sources.md) | Reading list prepared; corpus manifest pending |
+| Vector, graph, chunking, embeddings and import | [Research & comparisons](./research.md) | Source-specific reading notes added; provisional vector choice confirmed |
+| Learning sources and corpus permissions | [Sources & tutorials](./sources.md) | Five-document photography source plan; permission clearance pending |
 | Architecture and useful questions | [Experiments & checks](./experiments.md) | Proposed; no execution results |
 | Hosting constraints and next actions | [Next steps](./roadmap.md) | Open decisions |
 
 ## Purpose
 
-A beginner’s research notebook for understanding retrieval-augmented generation from the ground up. Organize explanations, tutorials, questions, comparisons, and small learning exercises before choosing an application or technology stack.
+A beginner’s research notebook for understanding retrieval-augmented generation from the ground up. Organize explanations, tutorials, questions, comparisons, and small learning exercises while planning a photography question-answering application.
 
 ## Starting questions
 
@@ -25,7 +25,7 @@ A beginner’s research notebook for understanding retrieval-augmented generatio
 
 ## Scope and current status
 
-This site documents learning. No application domain, database, framework, model provider, or implementation has been selected. The four linked videos are tutorials Megan reports using. Personal takeaways, and exercises are recorded only when provided or performed.
+This site documents learning and a proposed photography assistant for Canon EOS R1 users. Its first questions focus on landscapes and low-light photography, both handheld and with a tripod. Vector retrieval is the provisional approach. Camera connection and editing are future ideas outside the first version. A database product, framework, models and implementation are not yet selected. The four linked videos are tutorials Megan reports using. Personal takeaways and exercises are recorded only when provided or performed.
 
 ## Changed / checked / next
 

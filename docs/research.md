@@ -15,7 +15,21 @@ Import permitted documents → extract text → clean and deduplicate → preser
 | Graph database | Entities, typed relationships and supporting passages; retrieve facts/paths | Questions involving explicit relationships | Requires a suitable schema and checked relationship extraction |
 | Combined | Use graph and vector results for distinct evidence needs | A corpus with both passage and relationship questions | More components and evaluation work |
 
-**Decision pending:** compare actual corpus questions before selecting a tool. No implementation approach has been chosen. Researching both approaches does not require implementing both.
+**Provisional choice: vector retrieval — November 14, 2026.** Megan confirmed this direction after comparing vector and graph approaches. The database product, embedding model, and configuration remain undecided. Researching both approaches does not require implementing both.
+
+### My decision and reason
+
+I provisionally chose vector retrieval because my first questions concern explanations and guidance in a small document collection for the Canon EOS R1, focused on landscapes and low light, both handheld and with a tripod. Graph retrieval could explicitly represent relationships between shooting conditions, settings, and effects, but creating and verifying that graph adds work. I will test whether vector retrieval returns sufficient evidence before adding graph retrieval.
+
+### What I compared
+
+- **Vector:** retrieve passages by similarity to the question, retaining source locations and camera-model metadata. Candidate for the first version’s document questions.
+- **Graph:** explicitly model entities and relationships so retrieval can follow connected facts. Worth investigating if questions require connections passage retrieval repeatedly misses.
+- **Combined:** use both evidence paths, with additional setup and checking. Deferred until an observed need justifies it.
+
+**Check before treating this choice as successful:** compare vector retrieval against a keyword baseline using the same questions. Preserve retrieved passages and inspect support, missing context, and citations. If repeated failures involve connecting facts across sources, investigate graph retrieval alongside simpler changes to chunking and retrieval. No comparison has been executed yet.
+
+**Contribution:** AI helped phrase this decision; Megan explicitly agreed with its reasoning. This is a confirmed planning decision, not an experimental result.
 
 ## Chunking
 
@@ -58,7 +72,7 @@ Graph-model cross-check: [Neo4j’s graph database introduction](https://neo4j.c
 
 ### What this suggests for my photography project
 
-**AI-assisted interpretation, awaiting Megan’s decision:** EOS R1 manual passages may suit vector retrieval for differently worded questions about landscapes and low light. A graph could explicitly connect settings, effects, and shooting conditions, but would require a checked schema and supporting passages. Neither architecture nor database has been chosen; compare tools and actual questions before deciding.
+**Provisional application decision confirmed by Megan:** start with vector retrieval over a small permitted source collection for EOS R1 landscape and low-light questions. A graph remains an alternative if actual checks show that passage retrieval misses required connections. Specific database tools and source permissions still need comparison and verification.
 
 ### What I still need to check
 
