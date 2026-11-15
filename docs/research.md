@@ -31,6 +31,10 @@ I provisionally chose vector retrieval because my first questions concern explan
 
 **Contribution:** AI helped phrase this decision; Megan explicitly agreed with its reasoning. This is a confirmed planning decision, not an experimental result.
 
+## Database, model and hosting comparisons
+
+[Read the tool comparison and proposed architecture](./tools.md): Chroma, self-hosted and free-cloud Qdrant, embedding choices, Groq/Gemini generation options, and the course server’s documented limits. Recommendations remain provisional until capacity and access checks are performed.
+
 ## Chunking
 
 Chunking divides extracted content into retrievable pieces. Compare paragraph/heading boundaries with a fixed-size rule on the same document. Preserve document ID, title, section, source URL and a stable passage identifier. Inspect whether evidence gets split or unrelated topics get combined. A word-count prototype must not be described as token-based chunking.
