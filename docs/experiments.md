@@ -96,3 +96,39 @@ For each further exercise save date, source, question, configuration, expected e
 **Change:** prompt now requires conditional star-trail wording, tripod context for long night-sky exposures, no unstated explanations and a clear distinction between general guidance and exact R1 instructions. This revised prompt has not yet been retested live. Seven local mock-based pipeline tests pass; those do not measure answer quality.
 
 **Next:** run the prepared five-question evaluation suite, including focus, unsupported R1 menu instructions and an out-of-domain sports question. Returned-ID inclusion is checked automatically; factual support and refusal behavior require review. Because the pilot has only three passages and retrieval requests all three, this does not establish selective retrieval quality. Expand the authorized corpus and compare rankings with a keyword baseline before making such a claim.
+
+## Five-question evaluation — round 1, executed, user-reported
+
+[Download the exact user-supplied outputs (JSON)](/photography-evaluation-round-1.json). The revised prompt was run against E1–E5. AI reviewed the returned answers against the indexed passages; Megan's independent factual review is not claimed.
+
+| Case | Result of evidence review | Decision |
+| --- | --- | --- |
+| E1 | Retrieved all expected IDs and preserved tripod/manual focus, but invented live-view/zoom focusing steps. Also added explanations absent from the pilot. | Fails strict evidence support. A valid citation ID did not validate the claim. |
+| E2 | Retrieved C02 but called 10–20 seconds limits that avoid trails and used categorical trail wording. | Fails conditionality; do not treat the exposure range as a guaranteed threshold. |
+| E3 | Correctly declined an R1 menu recipe, but presented an AI-added corpus scope note as a quote from the original article. | Refusal behavior passed; source attribution failed. Distinguish annotations from original prose. |
+| E4 | Correctly selected manual focus/distant light; added an autofocus comparison and a sharp-star benefit not explicit in the indexed passage. | Core technique supported; extra explanation exceeds strict evidence. |
+| E5 | Application withheld the answer. The original output suppressed the draft and exact validation reason. | No unsafe sports settings reached the displayed answer, but refusal quality cannot be determined. Inconclusive; not a pass. |
+
+All expected IDs appeared for E1–E4, but every query retrieves all three indexed passages. This is not evidence of selective retrieval quality. E3/E5 have no supporting expected IDs; the earlier evaluator displayed `true` for an empty expected set, which does not demonstrate correct retrieval or refusal. The evaluator now reports that check as not applicable for empty expected sets.
+
+**Changes after review:** prompt explicitly excludes unsupported live-view/zoom instructions, no-trails guarantees and invented autofocus comparisons. It distinguishes AI-added source-scope annotations from original article wording. Withheld responses now include safe diagnostic reason codes and a clearly labeled unvalidated draft for local evaluation; that draft is not an approved answer for visitors. These are changes to test, not demonstrated repairs. Prompting and citation-ID checks alone have not ensured factual grounding.
+
+**Retest pending:** rerun all five questions and inspect every substantive claim, including refusals and source attribution. A hosted answer interface should not be called checked until these failures are repaired and verified.
+
+## Five-question evaluation — round 2, executed, user-reported
+
+[Download round 2 outputs (JSON)](/photography-evaluation-round-2.json). Same questions and indexed passages; changed prompt and diagnostics. This is one retest per question, not a reliability estimate. All returned IDs and scores match round 1; generation changed.
+
+| Case | Retest finding | Outcome |
+| --- | --- | --- |
+| E1 | Unsupported live-view/zoom steps removed; numeric suggestions and manual focus remain supported. Conditional trail wording fixed. However, the answer still omitted the tripod context in its own checklist, despite that context being in the question. | Improved, partial; preserve stability explicitly in a standalone answer. |
+| E2 | Now calls 10–20 seconds an experimental starting range and uses conditional trail wording. Tripod/manual mode included. Timer/camera-shake explanation remains an inference rather than an explicit statement in the indexed prose. | Main threshold failure repaired in this case; minor strict-grounding issue remains. |
+| E3 | Correctly refuses exact R1 menu instructions, but again quotes the AI-added scope annotation as if it were source wording. | Refusal passes; provenance failure persists. Further prompt repetition did not repair it. |
+| E4 | Manual focus, distant light and tripod supported. Adds a comparison with autofocus; quotes wording from our paraphrase as if the article's exact words. | Core answer supported; strict quotation/provenance issue remains. |
+| E5 | Explicitly says the night-sky corpus cannot answer indoor basketball shutter-speed advice; does not recommend the retrieved long exposures for sports. | Pass for this one out-of-scope behavior. |
+
+**Decision:** retain vector retrieval for the pilot. The observed errors are unsupported answer additions, lost context and source/annotation attribution. These results do not demonstrate a need for graph retrieval. Citation-ID validation remains necessary but insufficient. Do not call all five cases passed or the app production-ready.
+
+**Representation repair implemented locally after round 2:** separate source-derived paraphrases and project annotations at the retrieval-to-generation boundary. The original stored pilot payload is preserved; recognized project scope sentences are removed from the source text sent to Groq and retained separately in the returned inspection record. Label the text as paraphrase, not original quotation. Display attribution as “paraphrased from NPS” and prohibit presenting a paraphrase as an original quotation. Keep original URLs and locations visible. Add an explicit tripod/general-guidance context block outside unconstrained model prose. The answer now includes a deterministic evidence notice and general/tripod context field. A conservative check withholds generated answers containing double quotation marks when the evidence is paraphrased. Ten automated checks pass, including annotation exclusion and quotation rejection. These bounded checks are implemented locally, not yet live-retested; quote rejection does not prove all claims supported. Avoid repeating prompt-only tuning and calling it a demonstrated fix.
+
+**Changed / checked / next:** added two downloadable raw evaluation records and case-by-case reviews; reviewed ten user-reported responses against returned passages; ten local pipeline tests pass. Remaining checks include live testing of the revised provenance representation, keyword/ranking comparison on a larger authorized corpus, repeat evaluation and hosted application behavior. The documentation site is hosted; the photography assistant itself remains a local CLI prototype.
