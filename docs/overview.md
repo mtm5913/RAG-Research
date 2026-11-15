@@ -1,39 +1,37 @@
-# Research-review index
+# Research index
 
-**2. Individual RAG app + technical research — Plan draft, November 13, 2026.** This notebook is separate from the portfolio research site. Link it under section 2 of the existing combined individual record; it is not an additional submission report.
+**2. Individual RAG app + technical research — evolving individual record, updated November 14, 2026.** This notebook is separate from the portfolio research site. Link it under section 2 of the existing combined individual record; it is not an additional submission report.
 
 ## Start here
 
-| Evidence | Where to find it | Status |
+| Evidence | Where to find it | Current status |
 | --- | --- | --- |
-| Vector, graph, chunking, embeddings and import | [Research & comparisons](./research.md) | Initial AI-assisted explanation; personal research notes pending |
-| Learning sources and corpus permissions | [Sources & tutorials](./sources.md) | Reading list prepared; corpus manifest pending |
-| Architecture and useful questions | [Experiments & checks](./experiments.md) | Proposed; no execution results |
-| Partner question, response and changed decision | [Partner review](./review.md) | Real partner review pending |
-| Hosting constraints and next actions | [Next steps](./roadmap.md) | Open decisions |
+| Working application | [Fieldlight photography assistant](https://fieldlight.megan373lab.xyz) | Hosted prototype; HTTPS, one supported answer, citation expansion and one unsupported-question response checked publicly |
+| Vector/graph research and decision | [Research & comparisons](./research.md) | Vector selected provisionally; explicit relationships remain a comparison, not a demonstrated need |
+| Sources and permissions | [Sources & tutorials](./sources.md) | Two NPS prose sources represented by seven checked paraphrases; Canon candidates remain permission-pending |
+| Exact questions, failures, changes and retests | [Experiments & checks](./experiments.md) | Synthetic and real-source results, three earlier evaluation rounds, constrained checklist and expanded-corpus browser checks |
+| Tools and resource tradeoffs | [Tools & hosting](./tools.md) | Qdrant Cloud MiniLM inference, Groq and a separate course-server container |
+| Executed retrieval/chunking comparisons | [Comparison results](./comparisons.md) | Live vector vs keyword comparison and local tokenizer/boundary comparison, with raw evidence and limits |
+| Outstanding work | [Next steps](./roadmap.md) | Baseline/chunk comparisons, broader evaluation and independent source review remain |
 
-## Purpose
+## Purpose and bounded scope
 
-A beginner’s research notebook for understanding retrieval-augmented generation from the ground up. Organize explanations, tutorials, questions, comparisons, and small learning exercises before choosing an application or technology stack.
+Fieldlight helps photographers explore general night-sky and landscape guidance through typed questions, concise source-backed checklist items and inspectable citations. The intended camera is the Canon EOS R1, but the current permitted corpus does **not** establish R1-specific operations. It must refuse unsupported menu procedures and settings for subjects outside its evidence. Camera connection and photo editing remain future ideas, outside this prototype.
 
-## Starting questions
+The research site documents learning from the beginning: chunking, embeddings, retrieval, graph relationships, import, tool comparisons and evaluation. The application is a separate product linked from this record.
 
-- What does retrieval add to a model-generated answer?
-- How do chunking and embeddings work?
-- How do vector search and graph retrieval differ?
-- How is source information preserved during import?
-- How can I tell whether retrieved evidence actually supports an answer?
+## Actual foundation
 
-## Scope and current status
+The app uses four-passage vector retrieval from seven indexed passages. Groq selects from checked fact IDs using a strict JSON schema; the backend renders the checklist from allowlisted source-derived wording rather than free-form model prose. This prevents novel model wording in displayed checklist items, but selection relevance, completeness and paraphrase accuracy still require review.
 
-This site documents learning. No application domain, database, framework, model provider, or implementation has been selected. The four linked videos are tutorials Megan reports using. Personal takeaways, exercises, and partner feedback are recorded only when provided or performed.
+A separate Fieldlight container now runs on the course server behind its existing HTTPS proxy. Credentials stay in private server files; none are included in this record or browser responses. The portfolio and existing deployment repository were not modified. [Read the observed checks and limitations](./experiments.md).
 
 ## Changed / checked / next
 
-- **Changed:** Copied the career site’s visual design into a separate RAG notebook; prepared a review index and draft research structure.
-- **Checked:** The supplied project brief calls for researching both vector and graph approaches, implementing the chosen database path, and comparing against a keyword/structured baseline. Site build verification is recorded separately when run.
-- **Next:** Read the course handout; write explanations in my own words; try one chunking exercise; compare vector and graph approaches; ask a partner to review the explanations.
+- **Changed:** Defined a photography purpose; compared approaches and tools; prepared permitted prose; built the local interface and separate hosted foundation; replaced unconstrained answers after observing grounding failures.
+- **Checked:** 21 local pipeline tests and 10 HTTP tests; bounded local live browser cases; public HTTPS, supported waterfall answer, citation expansion and R1-procedure refusal. User-reported results are distinguished from AI-executed checks in the record.
+- **Next:** Broaden the completed retrieval comparison and run retrieval on alternative chunkings; repeat answer evaluation; independently verify relevant claims and carry out the proposed new source-support check. [My explanations of the choices are recorded](./research.md#my-takeaways-from-the-technical-research-and-checks). A working foundation does not complete every research or release requirement.
 
 ## Help and contribution
 
-AI drafted the site structure and initial text. Megan must verify source claims, write her own understanding, develop her own comparisons, and record actual experiments and real partner feedback. Draft statements do not establish independent understanding or completed research.
+Megan chose the application focus, intended users, initial camera/topics, vector direction and free-option preference; supplied learning resources/notes and privately entered account credentials. AI researched supporting sources, prepared code and paraphrases, reviewed outputs and ran the checks labeled as AI-executed. Those activities are not presented as Megan’s independent reading, peer feedback or authored reflection.

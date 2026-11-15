@@ -1,0 +1,73 @@
+{
+  "collection": "photography_expanded_v1",
+  "documents": [
+    {
+      "document_id": "PHOTO-05",
+      "title": "How to Photograph Acadia's Night Skies",
+      "publisher": "National Park Service / Acadia National Park",
+      "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+      "updated": "2021-10-14",
+      "accessed": "2026-11-14",
+      "permission": "NPS-created article prose, presented as ranger guidance, with no separate prose copyright notice observed. NPS ownership policy generally places NPS-created material in the public domain. This is a documented attribution-based assessment, not individual written permission. Images, captions, logos and third-party content excluded.",
+      "permission_url": "https://www.nps.gov/aboutus/disclaimer.htm#ownership",
+      "representation": "Manually checked paraphrases of selected prose, not verbatim source extraction. AI prepared and checked against the original; Megan's independent reading is not claimed.",
+      "chunks": [
+        {
+          "id": 1,
+          "source_id": "PHOTO-05-C01",
+          "section": "Equipment List; Set Up (manual mode)",
+          "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes. This is general advice, not a Canon EOS R1-specific procedure."
+        },
+        {
+          "id": 2,
+          "source_id": "PHOTO-05-C02",
+          "section": "Set Up (suggested settings)",
+          "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time."
+        },
+        {
+          "id": 3,
+          "source_id": "PHOTO-05-C03",
+          "section": "Set Up (white balance, release and focus)",
+          "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. These are general techniques; the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote."
+        }
+      ]
+    },
+    {
+      "document_id": "PHOTO-06",
+      "title": "Beginner's Photography Guide",
+      "publisher": "National Park Service",
+      "url": "https://home.nps.gov/articles/photographyguide.htm",
+      "updated": "2017-04-17",
+      "accessed": "2026-11-14",
+      "permission": "NPS-hosted instructional prose with no separate third-party prose attribution observed. Prose-only reuse assessment under NPS ownership policy; not individual written permission. All credited images, captions and logos excluded.",
+      "permission_url": "https://www.nps.gov/aboutus/disclaimer.htm#ownership",
+      "representation": "AI-prepared source-derived paraphrases checked against article sections; not original quotations. Independent student reading not claimed.",
+      "chunks": [
+        {
+          "id": 4,
+          "source_id": "PHOTO-06-C01",
+          "section": "Composition",
+          "text": "The NPS beginner guide suggests using the rule of thirds, surrounding objects as a frame, and leading lines to draw attention to the subject in outdoor photographs."
+        },
+        {
+          "id": 5,
+          "source_id": "PHOTO-06-C02",
+          "section": "Adjust Your Settings — Shutter speed",
+          "text": "For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod. It gives no universal waterfall exposure time."
+        },
+        {
+          "id": 6,
+          "source_id": "PHOTO-06-C03",
+          "section": "Adjust Your Settings — Aperture",
+          "text": "The guide explains that a larger lens opening has a lower f-number, admits more light and gives shallower depth of field. A higher f-number can make the background clearer. These are general relationships, not guaranteed landscape sharpness or an EOS R1 setting recipe."
+        },
+        {
+          "id": 7,
+          "source_id": "PHOTO-06-C04",
+          "section": "When to Shoot — Golden Hour",
+          "text": "The guide describes shortly after sunrise or before sunset as golden hour, when sunlight has a warmer appearance and softer lighting."
+        }
+      ]
+    }
+  ]
+}

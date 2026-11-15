@@ -1,0 +1,248 @@
+{
+  "provenance": "User-supplied terminal output; reviewed by AI. Not independently re-executed.",
+  "cases": [
+    {
+      "case": "E1",
+      "question": "What starting settings could I try for a starry sky with a tripod, and how should I focus?",
+      "expected_evidence_ids": [
+        "PHOTO-05-C01",
+        "PHOTO-05-C02",
+        "PHOTO-05-C03"
+      ],
+      "expected_ids_retrieved": true,
+      "manual_review_required": "Checklist preserves tripod/manual mode, conditional starting settings and manual focus. No R1-specific guarantee.",
+      "result": {
+        "status": "generated",
+        "answer": "**Starting settings (experimental, not R1‑specific)**  \n- **Mode:** Manual shooting mode【PHOTO-05-C01】  \n- **Aperture:** Open lens as wide as it allows (≈ f/1.4 – f/3.5)【PHOTO-05-C02】  \n- **ISO:** Begin at ISO 400 and increase if needed【PHOTO-05-C02】  \n- **Shutter speed:** Try exposures of 10 – 20 seconds; longer exposures can produce star trails as Earth rotates【PHOTO-05-C02】  \n- **White balance:** Automatic【PHOTO-05-C03】  \n- **Release:** Use a 2‑5 second self‑timer, remote release, or compatible smartphone【PHOTO-05-C03】\n\n**Focusing**  \n- Switch to manual focus.  \n- Use a distant bright light (a star, streetlight, or house) to set focus manually【PHOTO-05-C03】.  \n\nThese are general starting points; they are not guaranteed for every lens or the Canon EOS R1.",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time.",
+            "score": 0.51272726,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes. This is general advice, not a Canon EOS R1-specific procedure.",
+            "score": 0.50749,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)"
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. These are general techniques; the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote.",
+            "score": 0.42834625,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)"
+          }
+        ],
+        "citation_check": "Cited IDs exist in retrieved evidence; factual support still requires review.",
+        "usage": {
+          "queue_time": 0.032402724,
+          "prompt_tokens": 816,
+          "prompt_time": 0.048063169,
+          "completion_tokens": 456,
+          "completion_time": 0.954755875,
+          "total_tokens": 1272,
+          "total_time": 1.002819044,
+          "completion_tokens_details": {
+            "reasoning_tokens": 220
+          }
+        }
+      }
+    },
+    {
+      "case": "E2",
+      "question": "How can I photograph stars without streaks, and what exposure range does this guide suggest?",
+      "expected_evidence_ids": [
+        "PHOTO-05-C02"
+      ],
+      "expected_ids_retrieved": true,
+      "manual_review_required": "10–20 seconds is experimental, not a guaranteed no-trails threshold.",
+      "result": {
+        "status": "generated",
+        "answer": "**Checklist for star shots with minimal streaks**\n\n- **Use a sturdy tripod and manual shooting mode** – the NPS article lists these as the basic setup for night‑sky work【PHOTO-05-C01】.  \n- **Open the lens wide (≈ f/1.4–f/3.5)** and start at **ISO 400**, raising ISO if needed【PHOTO-05-C02】.  \n- **Set exposure to 10–20 seconds** as an experimental starting range; longer times may produce star trails because Earth rotates【PHOTO-05-C02】.  \n- **Focus manually on a distant bright point** (star, streetlight, etc.) and use a remote or timer to avoid camera shake【PHOTO-05-C03】.  \n\n*The guide does not provide an EOS R1‑specific maximum exposure time; it only suggests the 10–20 s range as a starting point.*",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time.",
+            "score": 0.49064106,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes. This is general advice, not a Canon EOS R1-specific procedure.",
+            "score": 0.41569504,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)"
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. These are general techniques; the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote.",
+            "score": 0.2640819,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)"
+          }
+        ],
+        "citation_check": "Cited IDs exist in retrieved evidence; factual support still requires review.",
+        "usage": {
+          "queue_time": 0.087425833,
+          "prompt_tokens": 814,
+          "prompt_time": 0.120663878,
+          "completion_tokens": 408,
+          "completion_time": 0.85306773,
+          "total_tokens": 1222,
+          "total_time": 0.973731608,
+          "completion_tokens_details": {
+            "reasoning_tokens": 205
+          }
+        }
+      }
+    },
+    {
+      "case": "E3",
+      "question": "What exact EOS R1 menu buttons turn on remote shooting?",
+      "expected_evidence_ids": [],
+      "expected_ids_retrieved": null,
+      "manual_review_required": "Acknowledge absent R1 menu instructions; invent no menu paths.",
+      "result": {
+        "status": "generated",
+        "answer": "The provided evidence does not give any EOS R1‑specific menu locations for enabling remote shooting. It only notes that a remote release is an option but “the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote”【PHOTO-05-C03】.  \n\nTherefore, an exact list of R1 menu buttons cannot be supplied from the available sources.",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. These are general techniques; the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote.",
+            "score": 0.602466,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes. This is general advice, not a Canon EOS R1-specific procedure.",
+            "score": 0.42793846,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)"
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time.",
+            "score": 0.27508643,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)"
+          }
+        ],
+        "citation_check": "Cited IDs exist in retrieved evidence; factual support still requires review.",
+        "usage": {
+          "queue_time": 0.284649888,
+          "prompt_tokens": 807,
+          "prompt_time": 0.096741296,
+          "completion_tokens": 164,
+          "completion_time": 0.341678466,
+          "total_tokens": 971,
+          "total_time": 0.438419762,
+          "completion_tokens_details": {
+            "reasoning_tokens": 76
+          }
+        }
+      }
+    },
+    {
+      "case": "E4",
+      "question": "Should I use autofocus or focus on a faraway bright object for this setup?",
+      "expected_evidence_ids": [
+        "PHOTO-05-C03"
+      ],
+      "expected_ids_retrieved": true,
+      "manual_review_required": "Manual focus using a distant bright light; no unsupported autofocus mode.",
+      "result": {
+        "status": "generated",
+        "answer": "The NPS guidance is general (not EOS R1‑specific) and recommends **manual focus**:\n\n- Set the camera on a tripod.  \n- Use a distant bright light (star, streetlight, house) to **manually focus** the lens.  \n- This avoids relying on autofocus, which isn’t addressed for night‑sky work.  \n\n**Why:** The article states “manually focus using a distant bright light” as the technique for night‑sky setups【PHOTO-05-C03】.  \n\nSo, focus on a far‑away bright object rather than using autofocus.",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. These are general techniques; the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote.",
+            "score": 0.45690942,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes. This is general advice, not a Canon EOS R1-specific procedure.",
+            "score": 0.32398164,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)"
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time.",
+            "score": 0.32343337,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)"
+          }
+        ],
+        "citation_check": "Cited IDs exist in retrieved evidence; factual support still requires review.",
+        "usage": {
+          "queue_time": 0.244188021,
+          "prompt_tokens": 812,
+          "prompt_time": 0.038174944,
+          "completion_tokens": 282,
+          "completion_time": 0.593162376,
+          "total_tokens": 1094,
+          "total_time": 0.63133732,
+          "completion_tokens_details": {
+            "reasoning_tokens": 152
+          }
+        }
+      }
+    },
+    {
+      "case": "E5",
+      "question": "What shutter speed freezes a basketball player indoors?",
+      "expected_evidence_ids": [],
+      "expected_ids_retrieved": null,
+      "manual_review_required": "Acknowledge missing sports evidence; do not transfer long night-sky exposures to sports.",
+      "result": {
+        "status": "generated",
+        "answer": "The provided NPS passages discuss night‑sky photography and experimental exposures of 10 to 20 seconds for tripod‑based work [PHOTO-05-C02]. They do not address indoor sports, freezing motion, or any shutter‑speed guidance for a basketball player. Therefore the evidence is insufficient to answer the question.",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time.",
+            "score": 0.21817127,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes. This is general advice, not a Canon EOS R1-specific procedure.",
+            "score": 0.21552517,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)"
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. These are general techniques; the article does not identify Canon EOS R1 menu paths or prove compatibility with a particular remote.",
+            "score": 0.19171782,
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)"
+          }
+        ],
+        "citation_check": "Cited IDs exist in retrieved evidence; factual support still requires review.",
+        "usage": {
+          "queue_time": 0.032782881,
+          "prompt_tokens": 805,
+          "prompt_time": 0.048903362,
+          "completion_tokens": 202,
+          "completion_time": 0.425125133,
+          "total_tokens": 1007,
+          "total_time": 0.474028495,
+          "completion_tokens_details": {
+            "reasoning_tokens": 127
+          }
+        }
+      }
+    }
+  ]
+}

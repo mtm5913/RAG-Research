@@ -1,0 +1,284 @@
+{
+  "method": "unique exact query-token overlap; explicit stopword list; ties by source ID; same stored passage text; top 4",
+  "corpus": "photography-expanded.json, 7 passages from 2 documents",
+  "results": [
+    {
+      "case": "W1",
+      "question": "How can I make a waterfall look smoother in a landscape photo?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C02"
+      ],
+      "ranking": [
+        {
+          "source_id": "PHOTO-06-C02",
+          "score": 2,
+          "matched_terms": [
+            "smoother",
+            "waterfall"
+          ]
+        },
+        {
+          "source_id": "PHOTO-06-C03",
+          "score": 2,
+          "matched_terms": [
+            "landscape",
+            "make"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 0,
+          "matched_terms": []
+        },
+        {
+          "source_id": "PHOTO-05-C02",
+          "score": 0,
+          "matched_terms": []
+        }
+      ],
+      "recall_at_4": 1.0,
+      "reciprocal_rank_at_4": 1.0
+    },
+    {
+      "case": "A1",
+      "question": "How does aperture affect depth of field in an outdoor landscape photograph?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C03"
+      ],
+      "ranking": [
+        {
+          "source_id": "PHOTO-06-C03",
+          "score": 3,
+          "matched_terms": [
+            "depth",
+            "field",
+            "landscape"
+          ]
+        },
+        {
+          "source_id": "PHOTO-06-C01",
+          "score": 1,
+          "matched_terms": [
+            "outdoor"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 0,
+          "matched_terms": []
+        },
+        {
+          "source_id": "PHOTO-05-C02",
+          "score": 0,
+          "matched_terms": []
+        }
+      ],
+      "recall_at_4": 1.0,
+      "reciprocal_rank_at_4": 1.0
+    },
+    {
+      "case": "G1",
+      "question": "When is golden hour, and what is its light like for landscapes?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C04"
+      ],
+      "ranking": [
+        {
+          "source_id": "PHOTO-06-C04",
+          "score": 2,
+          "matched_terms": [
+            "golden",
+            "hour"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 1,
+          "matched_terms": [
+            "light"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C03",
+          "score": 1,
+          "matched_terms": [
+            "light"
+          ]
+        },
+        {
+          "source_id": "PHOTO-06-C03",
+          "score": 1,
+          "matched_terms": [
+            "light"
+          ]
+        }
+      ],
+      "recall_at_4": 1.0,
+      "reciprocal_rank_at_4": 1.0
+    },
+    {
+      "case": "N1",
+      "question": "What starting settings could I try for a starry sky with a tripod, and how should I focus?",
+      "expected_evidence_ids": [
+        "PHOTO-05-C01",
+        "PHOTO-05-C02",
+        "PHOTO-05-C03"
+      ],
+      "ranking": [
+        {
+          "source_id": "PHOTO-05-C02",
+          "score": 4,
+          "matched_terms": [
+            "settings",
+            "sky",
+            "starting",
+            "tripod"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 2,
+          "matched_terms": [
+            "sky",
+            "tripod"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C03",
+          "score": 2,
+          "matched_terms": [
+            "focus",
+            "tripod"
+          ]
+        },
+        {
+          "source_id": "PHOTO-06-C02",
+          "score": 1,
+          "matched_terms": [
+            "tripod"
+          ]
+        }
+      ],
+      "recall_at_4": 1.0,
+      "reciprocal_rank_at_4": 1.0
+    },
+    {
+      "case": "P1",
+      "question": "How can I give falling water a silky appearance while keeping the camera still?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C02"
+      ],
+      "ranking": [
+        {
+          "source_id": "PHOTO-06-C02",
+          "score": 3,
+          "matched_terms": [
+            "camera",
+            "keeping",
+            "water"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 1,
+          "matched_terms": [
+            "camera"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C03",
+          "score": 1,
+          "matched_terms": [
+            "camera"
+          ]
+        },
+        {
+          "source_id": "PHOTO-06-C04",
+          "score": 1,
+          "matched_terms": [
+            "appearance"
+          ]
+        }
+      ],
+      "recall_at_4": 1.0,
+      "reciprocal_rank_at_4": 1.0
+    },
+    {
+      "case": "P2",
+      "question": "How could I give a cascade a silky appearance rather than freeze its motion?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C02"
+      ],
+      "ranking": [
+        {
+          "source_id": "PHOTO-06-C04",
+          "score": 1,
+          "matched_terms": [
+            "appearance"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 0,
+          "matched_terms": []
+        },
+        {
+          "source_id": "PHOTO-05-C02",
+          "score": 0,
+          "matched_terms": []
+        },
+        {
+          "source_id": "PHOTO-05-C03",
+          "score": 0,
+          "matched_terms": []
+        }
+      ],
+      "recall_at_4": 0.0,
+      "reciprocal_rank_at_4": 0
+    },
+    {
+      "case": "U1",
+      "question": "What exact EOS R1 menu buttons turn on remote shooting?",
+      "expected_evidence_ids": [],
+      "ranking": [
+        {
+          "source_id": "PHOTO-05-C03",
+          "score": 4,
+          "matched_terms": [
+            "eos",
+            "menu",
+            "r1",
+            "remote"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C01",
+          "score": 3,
+          "matched_terms": [
+            "eos",
+            "r1",
+            "shooting"
+          ]
+        },
+        {
+          "source_id": "PHOTO-05-C02",
+          "score": 2,
+          "matched_terms": [
+            "eos",
+            "r1"
+          ]
+        },
+        {
+          "source_id": "PHOTO-06-C03",
+          "score": 2,
+          "matched_terms": [
+            "eos",
+            "r1"
+          ]
+        }
+      ],
+      "recall_at_4": null,
+      "reciprocal_rank_at_4": null
+    }
+  ]
+}

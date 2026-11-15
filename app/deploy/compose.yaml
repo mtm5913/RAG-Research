@@ -1,0 +1,42 @@
+name: fieldlight
+services:
+  app:
+    build:
+      context: .
+      dockerfile: app/deploy/Dockerfile
+    image: fieldlight:local
+    restart: unless-stopped
+    user: "${APP_UID:-1000}:${APP_GID:-1000}"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 192m
+    cpus: 0.25
+    pids_limit: 64
+    environment:
+      QDRANT_API_KEY_FILE: /run/secrets/qdrant_key
+      GROQ_API_KEY_FILE: /run/secrets/groq_key
+    secrets: [qdrant_key, groq_key]
+    networks: [web]
+    labels:
+      traefik.enable: "${APP_ROUTE_ENABLED:-false}"
+      traefik.docker.network: hosting-web
+      traefik.http.routers.fieldlight.rule: Host(`fieldlight.megan373lab.xyz`)
+      traefik.http.routers.fieldlight.entrypoints: websecure
+      traefik.http.routers.fieldlight.tls: "true"
+      traefik.http.routers.fieldlight.tls.certresolver: letsencrypt
+      traefik.http.services.fieldlight.loadbalancer.server.port: "8765"
+    logging:
+      driver: json-file
+      options:
+        max-size: 2m
+        max-file: "2"
+networks:
+  web:
+    external: true
+    name: hosting-web
+secrets:
+  qdrant_key:
+    file: ./secrets/qdrant_key
+  groq_key:
+    file: ./secrets/groq_key

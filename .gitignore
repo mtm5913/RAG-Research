@@ -1,4 +1,15 @@
 node_modules/
+node_modules
 docs/.vitepress/cache/
 docs/.vitepress/dist/
 .DS_Store
+
+# Server/local credentials
+.env
+.env.*
+!.env.example
+__pycache__/
+
+# Local corpus activation state (no credentials)
+.local-corpus.json
+.local-corpus.json.tmp

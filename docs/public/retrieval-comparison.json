@@ -1,0 +1,679 @@
+{
+  "date_label": "2026-11-14 America/New_York",
+  "started_utc": "2026-11-15T03:17:57.395651+00:00",
+  "corpus_sha256": "35a6910a2b0e27c8b2ffe067503646286efd38c64583229c18c6494f72105f73",
+  "corpus_passages": 7,
+  "keyword_method": "Unique exact token overlap with explicit stopwords; same stored text; ties by source ID, including zero-score filler; top 4.",
+  "vector_method": "Live Qdrant Cloud MiniLM retrieval observed through public app; passage order preserved by backend; top 4. Model-generated answer not included in retrieval metric.",
+  "selection_note": "Small purposively chosen set. P2 is an added lexical-mismatch stress case selected before vector execution, not a random held-out sample. No statistical or general accuracy claim.",
+  "results": [
+    {
+      "case": "W1",
+      "question": "How can I make a waterfall look smoother in a landscape photo?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C02"
+      ],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-06-C02",
+            "score": 2,
+            "matched_terms": [
+              "smoother",
+              "waterfall"
+            ]
+          },
+          {
+            "source_id": "PHOTO-06-C03",
+            "score": 2,
+            "matched_terms": [
+              "landscape",
+              "make"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 0,
+            "matched_terms": []
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "score": 0,
+            "matched_terms": []
+          }
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-06-C02",
+          "PHOTO-05-C01",
+          "PHOTO-06-C01",
+          "PHOTO-06-C03"
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "answer_status": "generated",
+      "observed_public_response": {
+        "question": "How can I make a waterfall look smoother in a landscape photo?",
+        "mode": "live",
+        "status": "generated",
+        "answer": "General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.\n\n- **Moving water:** For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod. [PHOTO-06-C02]",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "citation_check": "Every displayed checklist item matches an allowlisted sentence in a retrieved passage. Relevance, completeness and original paraphrase accuracy still need review.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-06-C02",
+            "text": "For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Shutter speed",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C01",
+            "text": "The NPS beginner guide suggests using the rule of thirds, surrounding objects as a frame, and leading lines to draw attention to the subject in outdoor photographs.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Composition",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C03",
+            "text": "The guide explains that a larger lens opening has a lower f-number, admits more light and gives shallower depth of field. A higher f-number can make the background clearer.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Aperture",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    },
+    {
+      "case": "A1",
+      "question": "How does aperture affect depth of field in an outdoor landscape photograph?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C03"
+      ],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-06-C03",
+            "score": 3,
+            "matched_terms": [
+              "depth",
+              "field",
+              "landscape"
+            ]
+          },
+          {
+            "source_id": "PHOTO-06-C01",
+            "score": 1,
+            "matched_terms": [
+              "outdoor"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 0,
+            "matched_terms": []
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "score": 0,
+            "matched_terms": []
+          }
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-06-C03",
+          "PHOTO-06-C01",
+          "PHOTO-05-C02",
+          "PHOTO-05-C01"
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "answer_status": "generated",
+      "observed_public_response": {
+        "question": "How does aperture affect depth of field in an outdoor landscape photograph?",
+        "mode": "live",
+        "status": "generated",
+        "answer": "General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.\n\n- **Aperture and depth of field:** The guide explains that a larger lens opening has a lower f-number, admits more light and gives shallower depth of field. A higher f-number can make the background clearer. [PHOTO-06-C03]",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "citation_check": "Every displayed checklist item matches an allowlisted sentence in a retrieved passage. Relevance, completeness and original paraphrase accuracy still need review.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-06-C03",
+            "text": "The guide explains that a larger lens opening has a lower f-number, admits more light and gives shallower depth of field. A higher f-number can make the background clearer.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Aperture",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C01",
+            "text": "The NPS beginner guide suggests using the rule of thirds, surrounding objects as a frame, and leading lines to draw attention to the subject in outdoor photographs.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Composition",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. Longer exposures can produce star trails as Earth rotates.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    },
+    {
+      "case": "G1",
+      "question": "When is golden hour, and what is its light like for landscapes?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C04"
+      ],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-06-C04",
+            "score": 2,
+            "matched_terms": [
+              "golden",
+              "hour"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 1,
+            "matched_terms": [
+              "light"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "score": 1,
+            "matched_terms": [
+              "light"
+            ]
+          },
+          {
+            "source_id": "PHOTO-06-C03",
+            "score": 1,
+            "matched_terms": [
+              "light"
+            ]
+          }
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-06-C04",
+          "PHOTO-05-C02",
+          "PHOTO-06-C02",
+          "PHOTO-05-C01"
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "answer_status": "generated",
+      "observed_public_response": {
+        "question": "When is golden hour, and what is its light like for landscapes?",
+        "mode": "live",
+        "status": "generated",
+        "answer": "General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.\n\n- **Golden hour:** The guide describes shortly after sunrise or before sunset as golden hour, when sunlight has a warmer appearance and softer lighting. [PHOTO-06-C04]",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "citation_check": "Every displayed checklist item matches an allowlisted sentence in a retrieved passage. Relevance, completeness and original paraphrase accuracy still need review.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-06-C04",
+            "text": "The guide describes shortly after sunrise or before sunset as golden hour, when sunlight has a warmer appearance and softer lighting.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "When to Shoot — Golden Hour",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. Longer exposures can produce star trails as Earth rotates.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C02",
+            "text": "For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Shutter speed",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    },
+    {
+      "case": "N1",
+      "question": "What starting settings could I try for a starry sky with a tripod, and how should I focus?",
+      "expected_evidence_ids": [
+        "PHOTO-05-C01",
+        "PHOTO-05-C02",
+        "PHOTO-05-C03"
+      ],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-05-C02",
+            "score": 4,
+            "matched_terms": [
+              "settings",
+              "sky",
+              "starting",
+              "tripod"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 2,
+            "matched_terms": [
+              "sky",
+              "tripod"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "score": 2,
+            "matched_terms": [
+              "focus",
+              "tripod"
+            ]
+          },
+          {
+            "source_id": "PHOTO-06-C02",
+            "score": 1,
+            "matched_terms": [
+              "tripod"
+            ]
+          }
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-05-C02",
+          "PHOTO-05-C01",
+          "PHOTO-05-C03",
+          "PHOTO-06-C02"
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "answer_status": "generated",
+      "observed_public_response": {
+        "question": "What starting settings could I try for a starry sky with a tripod, and how should I focus?",
+        "mode": "live",
+        "status": "generated",
+        "answer": "General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.\n\n- **Equipment:** For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. [PHOTO-05-C01]\n\n- **Mode:** It recommends manual shooting mode. [PHOTO-05-C01]\n\n- **Experimental settings:** NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. [PHOTO-05-C02]\n\n- **Star trails:** Longer exposures can produce star trails as Earth rotates. [PHOTO-05-C02]\n\n- **White balance and release:** NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. [PHOTO-05-C03]\n\n- **Focus:** With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house. [PHOTO-05-C03]\n\nFor tripod-based night-sky experiments only. The suggested exposure range does not guarantee the absence of star trails.",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "citation_check": "Every displayed checklist item matches an allowlisted sentence in a retrieved passage. Relevance, completeness and original paraphrase accuracy still need review.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. Longer exposures can produce star trails as Earth rotates.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C02",
+            "text": "For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Shutter speed",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    },
+    {
+      "case": "P1",
+      "question": "How can I give falling water a silky appearance while keeping the camera still?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C02"
+      ],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-06-C02",
+            "score": 3,
+            "matched_terms": [
+              "camera",
+              "keeping",
+              "water"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 1,
+            "matched_terms": [
+              "camera"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "score": 1,
+            "matched_terms": [
+              "camera"
+            ]
+          },
+          {
+            "source_id": "PHOTO-06-C04",
+            "score": 1,
+            "matched_terms": [
+              "appearance"
+            ]
+          }
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-06-C02",
+          "PHOTO-05-C01",
+          "PHOTO-05-C03",
+          "PHOTO-06-C04"
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "answer_status": "generated",
+      "observed_public_response": {
+        "question": "How can I give falling water a silky appearance while keeping the camera still?",
+        "mode": "live",
+        "status": "generated",
+        "answer": "General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.\n\n- **Moving water:** For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod. [PHOTO-06-C02]",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "citation_check": "Every displayed checklist item matches an allowlisted sentence in a retrieved passage. Relevance, completeness and original paraphrase accuracy still need review.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-06-C02",
+            "text": "For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Shutter speed",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C04",
+            "text": "The guide describes shortly after sunrise or before sunset as golden hour, when sunlight has a warmer appearance and softer lighting.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "When to Shoot — Golden Hour",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    },
+    {
+      "case": "P2",
+      "question": "How could I give a cascade a silky appearance rather than freeze its motion?",
+      "expected_evidence_ids": [
+        "PHOTO-06-C02"
+      ],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-06-C04",
+            "score": 1,
+            "matched_terms": [
+              "appearance"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 0,
+            "matched_terms": []
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "score": 0,
+            "matched_terms": []
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "score": 0,
+            "matched_terms": []
+          }
+        ],
+        "recall_at_4": 0.0,
+        "reciprocal_rank_at_4": 0
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-06-C02",
+          "PHOTO-05-C03",
+          "PHOTO-06-C01",
+          "PHOTO-06-C04"
+        ],
+        "recall_at_4": 1.0,
+        "reciprocal_rank_at_4": 1.0
+      },
+      "answer_status": "generated",
+      "observed_public_response": {
+        "question": "How could I give a cascade a silky appearance rather than freeze its motion?",
+        "mode": "live",
+        "status": "generated",
+        "answer": "General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.\n\n- **Moving water:** For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod. [PHOTO-06-C02]",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "citation_check": "Every displayed checklist item matches an allowlisted sentence in a retrieved passage. Relevance, completeness and original paraphrase accuracy still need review.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-06-C02",
+            "text": "For a smoother moving-water effect, the guide suggests a slower shutter speed and keeping the camera steady, preferably on a tripod.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Shutter speed",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C01",
+            "text": "The NPS beginner guide suggests using the rule of thirds, surrounding objects as a frame, and leading lines to draw attention to the subject in outdoor photographs.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Composition",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C04",
+            "text": "The guide describes shortly after sunrise or before sunset as golden hour, when sunlight has a warmer appearance and softer lighting.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "When to Shoot — Golden Hour",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    },
+    {
+      "case": "U1",
+      "question": "What exact EOS R1 menu buttons turn on remote shooting?",
+      "expected_evidence_ids": [],
+      "keyword": {
+        "ranking": [
+          {
+            "source_id": "PHOTO-05-C03",
+            "score": 4,
+            "matched_terms": [
+              "eos",
+              "menu",
+              "r1",
+              "remote"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "score": 3,
+            "matched_terms": [
+              "eos",
+              "r1",
+              "shooting"
+            ]
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "score": 2,
+            "matched_terms": [
+              "eos",
+              "r1"
+            ]
+          },
+          {
+            "source_id": "PHOTO-06-C03",
+            "score": 2,
+            "matched_terms": [
+              "eos",
+              "r1"
+            ]
+          }
+        ],
+        "recall_at_4": null,
+        "reciprocal_rank_at_4": null
+      },
+      "vector": {
+        "ranking_ids": [
+          "PHOTO-05-C03",
+          "PHOTO-05-C01",
+          "PHOTO-06-C03",
+          "PHOTO-05-C02"
+        ],
+        "recall_at_4": null,
+        "reciprocal_rank_at_4": null
+      },
+      "answer_status": "insufficient_evidence",
+      "observed_public_response": {
+        "question": "What exact EOS R1 menu buttons turn on remote shooting?",
+        "mode": "live",
+        "status": "insufficient_evidence",
+        "answer": "The available source does not provide enough evidence for this question. It contains selected general photography guidance, not exact EOS R1 procedures or numeric settings for every scene.",
+        "evidence_notice": "Checklist wording is copied from checked source-derived paraphrases, not original NPS quotations.",
+        "setup_context": "General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.",
+        "answer_method": "source_checklist_v1",
+        "passages": [
+          {
+            "source_id": "PHOTO-05-C03",
+            "text": "NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone. With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (white balance, release and focus)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C01",
+            "text": "For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod. It recommends manual shooting mode. Long exposures collect light in dark scenes.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Equipment List; Set Up (manual mode)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-06-C03",
+            "text": "The guide explains that a larger lens opening has a lower f-number, admits more light and gives shallower depth of field. A higher f-number can make the background clearer.",
+            "url": "https://home.nps.gov/articles/photographyguide.htm",
+            "section": "Adjust Your Settings — Aperture",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          },
+          {
+            "source_id": "PHOTO-05-C02",
+            "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. Longer exposures can produce star trails as Earth rotates.",
+            "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+            "section": "Set Up (suggested settings)",
+            "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation"
+          }
+        ]
+      },
+      "returned_text_matches_local_paraphrase_manifest": true
+    }
+  ],
+  "finished_utc": "2026-11-15T03:20:16.124731+00:00",
+  "summary": {
+    "keyword": {
+      "answerable_questions": 6,
+      "macro_recall_at_4": 0.8333333333333334,
+      "mean_reciprocal_rank_at_4": 0.8333333333333334
+    },
+    "vector": {
+      "answerable_questions": 6,
+      "macro_recall_at_4": 1.0,
+      "mean_reciprocal_rank_at_4": 1.0
+    }
+  }
+}
