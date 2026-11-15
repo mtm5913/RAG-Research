@@ -150,3 +150,17 @@ All expected IDs appeared for E1–E4, but every query retrieves all three index
 **Verification:** ten automated pipeline checks pass after the fallback change. Replaying saved live responses locally verifies E3/E5 become deterministic insufficient-evidence responses and that the fallback does not repeat uncited camera settings. Replay is not another cloud execution. Remaining free-form explanation and exposure-guarantee errors are documented, not declared solved.
 
 **Decision:** the small pilot demonstrates real import/retrieval/generation and meaningful failures. Stop treating repeated prompt edits as proof of correctness. Before public app release, use a more constrained answer representation or claim-level support checking and retest. A broader permitted corpus, selective-retrieval comparison and hosted app checks remain outstanding. Research documentation can report these results now without calling the assistant finished.
+
+## Strict-schema live browser retest — executed by AI
+
+Megan restarted the local live server with private keys. AI submitted the exact E1–E5 questions through the browser form, using actual Qdrant and Groq requests rather than saved examples. The three-per-minute app limit was respected with a pause before E4/E5.
+
+| Case | Observed display | Outcome for this run |
+| --- | --- | --- |
+| E1 | Equipment, manual mode, experimental settings, conditional star-trail warning and manual focus, with matching passage IDs. No novel live-view/zoom or camera-shake explanation. | Pass for expected checklist support and context. |
+| E2 | Equipment, experimental 10–20-second range and conditional star-trail wording; explicit no-guarantee note. | Pass for exposure qualification. |
+| E3 | Deterministic insufficient-evidence response; no exact R1 menu procedure or quoted annotation. | Pass for absent R1 procedure. |
+| E4 | Only the checked manual-focus/distant-bright-light sentence, with C03. | Pass for focus technique; no unsupported autofocus comparison. |
+| E5 | Deterministic insufficient-evidence response; no numerical sports recommendation. | Pass for out-of-domain behavior. |
+
+All five passed their bounded criteria in this run after the strict-schema revision. This supersedes the initial two withheld supported cases, but does not establish statistical reliability. The exact cause of the earlier selection failures was not independently recovered. A generic no-trails caveat still appears on focus-only answers; it is accurate context but unnecessary for that question. Broader source accuracy, selection relevance on varied questions, selective retrieval with a larger corpus and public hosting remain open. No credentials were read or copied by AI.
