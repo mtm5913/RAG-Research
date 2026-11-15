@@ -23,14 +23,20 @@ Sources: [Chroma single-node guidance](https://docs.trychroma.com/guides/perform
 
 **Reasoning:** Qdrant Cloud is preferred here because of limited shared server memory, not because it has been shown faster or more accurate. Free clusters can suspend after one week unused and be deleted after four weeks without reactivation. Keep the authorized corpus, chunk manifest and regeneration procedure outside the database; check readiness before demonstrations. Cloud API access must be authenticated and used by the backend, never directly by visitors.
 
+## Update: cloud embeddings verified
+
+On November 14, a real dashboard smoke test successfully used Qdrant Cloud Inference with `sentence-transformers/all-MiniLM-L6-v2`, the free option Megan observed in her cluster. This is now the preferred embedding path to investigate, instead of loading the encoder on the course server. The database and embedding work can both stay in Qdrant Cloud. A separate generation provider is still required for complete RAG answers.
+
+[Actual test results and limits](./experiments.md#actual-results-qdrant-integration-smoke-test) include the three synthetic records, paraphrased query, returned rankings and server reachability check. Availability was verified on this cluster; no paid model was selected.
+
 ## Embedding comparison
 
 Embeddings represent text for retrieval; the generation model writes the answer. Choosing one does not automatically supply the other.
 
 | Option | Benefit | Limitation | Proposed use |
 | --- | --- | --- | --- |
-| `sentence-transformers/all-MiniLM-L6-v2` locally | Apache-2.0 model; 384-dimensional vectors; no per-call embedding API fee | Default truncation after 256 word pieces; runtime still consumes RAM/CPU and query latency must be measured | First candidate. Batch document embedding on a development machine; evaluate one-at-a-time query embedding on the server |
-| Hosted embedding API | Moves query embedding computation off the course server | Separate quotas, permissions, data handling and model lifecycle; changing models requires a compatible reindex | Alternative if local query embeddings do not fit; exact free eligibility and model still need verification |
+| `sentence-transformers/all-MiniLM-L6-v2` locally | Apache-2.0 model; 384-dimensional vectors; no per-call embedding API fee | Default truncation after 256 word pieces; runtime still consumes RAM/CPU and query latency must be measured | Fallback candidate if cloud inference is unavailable; server memory and latency remain untested |
+| Hosted embedding API | Moves query embedding computation off the course server | Separate quotas, permissions, data handling and model lifecycle; changing models requires a compatible reindex | Qdrant Cloud MiniLM is now the preferred path after the November 14 smoke test; verify limits before importing the corpus |
 
 Source: [MiniLM model card](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2).
 
@@ -50,7 +56,7 @@ Groq does not retain inference inputs/outputs by default, but some features and 
 
 ## Proposed architecture
 
-**Recommended prototype for Megan to consider:** a small FastAPI service on the course server, Qdrant Cloud Free for vectors, MiniLM for embeddings if query-memory checks pass, and a Groq Free generation model selected after account verification. Gemini is the alternative. Nothing has been provisioned.
+**Recommended prototype for Megan to consider:** a small FastAPI service on the course server, Qdrant Cloud Free for vectors, Qdrant Cloud MiniLM inference for embeddings, and a Groq Free generation model selected after account verification. Gemini is the alternative. The Qdrant Free cluster and isolated synthetic test collection exist. The app service and generation provider have not been deployed.
 
 1. **Owner import:** authenticated owner submits an authorized source. Backend checks permissions, extracts/cleans text, removes duplicates and retains document IDs, headings, URLs and passage locations.
 2. **Indexing:** tokenize/chunk; generate real embeddings; store vectors, text and provenance in Qdrant. Keep a recoverable source/manifest copy and record model revision and collection configuration.
