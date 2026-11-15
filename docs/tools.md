@@ -1,5 +1,8 @@
 # Tools, hosting & resource comparison
 
+**Current implementation, November 14:** the [hosted Fieldlight prototype](https://fieldlight.megan373lab.xyz) uses Qdrant Cloud MiniLM inference, Groq `openai/gpt-oss-120b` fact selection and a separate course-server container. [Actual hosting checks](./experiments.md#hosted-foundation-public-checks-executed) supersede earlier proposed/unexecuted status statements below. The tables preserve alternatives and reasons; historical starting limits are not measured performance. The current selector uses strict JSON schema, low reasoning effort and a 2,000-completion-token cap; it does not generate the displayed checklist wording.
+
+
 **Research checked November 14, 2026.** AI-assisted comparison for Megan’s proposed EOS R1 photography assistant. These are recommendations for a prototype, not installed services, measured performance, or a final stack approved by Megan. No accounts were created and no deployment/server configuration was changed.
 
 ## Constraints that drive the comparison

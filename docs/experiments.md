@@ -185,3 +185,16 @@ Each query retrieved four of seven passages, so retrieval now excludes some cont
 **Waterfall repair:** when the selector chooses the waterfall item, the backend now emits only that item's checked wording. This conservative, single-topic response prevents cross-scene mixing, including star-specific settings. It may omit secondary topics in a compound question; users can ask those separately. A mock regression checks attempted overselection of night-sky settings. 21 pipeline tests pass. The development server reloads this pipeline between requests; no credential re-entry is needed for this change.
 
 **Waterfall live retest:** AI resubmitted the same waterfall question after the patch. The browser displayed only the checked moving-water sentence with PHOTO-06-C02; no night-sky equipment, mode or exposure items appeared. Pass for this bounded relevance repair. No restart or private-key entry was needed. Expanded testing comprises six distinct questions plus this repair retest; results do not establish general reliability.
+
+## Hosted foundation — public checks executed
+
+**Public app:** [Fieldlight](https://fieldlight.megan373lab.xyz). Megan ran the private setup helper and supplied a healthy container result. AI then opened the public HTTPS page successfully without a certificate warning, observed Live / Qdrant + Groq and two articles/seven passages, and submitted actual typed questions:
+
+- Waterfall blur: correct, focused PHOTO-06-C02 checklist item; citation button expanded the returned passage and original beginner-guide URL.
+- Exact R1 remote-shooting menu buttons: deterministic insufficient-evidence response; no invented menu path.
+
+These are executed public browser checks, not saved examples. They verify this hosted flow for two cases, not the full earlier suite on the public deployment or general reliability. A read-only server check confirmed running/healthy state, restart policy unless-stopped, route enabled, secret directory mode 700 and both secret file modes 600. No key contents were read. Observed app memory was 21.9 MiB /192 MiB at that snapshot.
+
+The separate Compose project uses 0.25 CPU and a 192 MiB cap on the existing course server. It has no published host port and routes through the existing HTTPS proxy. The portfolio, original deployment repository and existing service processes were not changed or restarted by the deployment procedure. The app now runs independently of Megan’s local terminal.
+
+**Changed / checked / next:** hosted foundation and public app link added; 21 pipeline tests plus 10 HTTP tests passed before staging, isolated-container checks passed, and two public live cases passed. Still pending: broader public regressions, baseline/chunk comparisons, load/failure/restart checks and original-source accuracy review. No production-readiness or uptime guarantee is claimed.
