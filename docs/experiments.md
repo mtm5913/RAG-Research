@@ -1,26 +1,42 @@
 # Experiments & checks
 
-**Status:** a real, isolated Qdrant embedding/retrieval smoke test was executed November 14, 2026. The remaining app checks below are planned. No generated answer or real photography corpus has been tested.
+**Status:** a real, isolated Qdrant embedding/retrieval smoke test was executed November 14, 2026. Megan subsequently supplied successful terminal output for Qdrant authentication, Groq generation and the combined synthetic retrieval/generation pipeline. These are user-reported executed results. The real-source import and evaluations below are prepared but not executed.
 
-## Start with a learning exercise
+## Real-source trace — prepared, not executed
 
-Use a short permitted text to explore how content is imported, represented, retrieved, and cited. No app or technology stack is assumed. Begin by inspecting source text and chunk boundaries; add database or model experiments only when ready.
+**Source:** [NPS: How to Photograph Acadia’s Night Skies](https://home.nps.gov/articles/000/night-skies-photography-acadia.htm), updated October 14, 2021; checked November 14, 2026. The article presents ranger guidance. Selected prose has no separate third-party attribution observed; images, captions and logos are excluded. [NPS ownership policy](https://www.nps.gov/aboutus/disclaimer.htm#ownership) generally places NPS-created material in the public domain. This is an attribution-based permission assessment, not written individual permission.
 
-## Trace one source — workshop task
+**Representation:** three manually checked paraphrase passages, not verbatim extracted chunks. PHOTO-05-C01 covers equipment/manual mode; C02 covers experimental settings and star-trail context; C03 covers focus/release/white balance. General guidance must stay distinct from verified EOS R1 operations. The versioned local manifest records the original URL, section, date, permission basis and transformation.
 
-Choose a real permitted passage. Record its document ID and exact location, the proposed chunk or graph fact, a useful question, expected evidence, proposed answer and citation. Then explain what would count as missing or contradictory evidence. This trace is pending; a diagram alone would not be an executed check.
+**Proposed retrieval:** query the separate `photography_pilot_v1` collection with the same 384-dimensional MiniLM model used for indexing; retrieve up to three passages with source IDs. The synthetic collection remains separate. Model-tokenizer chunk-size verification and comparison with another chunking strategy remain pending; these short manual passages do not prove an optimal chunk size.
 
-## Evaluation questions — draft categories
+**Question:** “What starting settings could I try for a starry sky with a tripod, and how should I focus?”
 
-Replace these prompts with exact questions and expected source passages after choosing the corpus.
+**Expected evidence:** C01 for tripod/manual mode, C02 for experimental aperture/ISO/exposure suggestions and star trails, C03 for manual focus using a distant bright light. A proposed answer can give those general starting points with passage citations; it must say they are conditional NPS guidance, not tested R1 settings. A missing C03 would reveal incomplete evidence for focus. A confident R1-specific guarantee would exceed this source.
 
-| ID | Question type | Evidence needed | Failure to watch for |
+**Import status:** source manifest and importer prepared locally; no real-source import result observed yet. No real-source answer is claimed.
+
+## Exact evaluation questions — planned
+
+| ID | Exact question | Expected evidence | Failure criteria |
 | --- | --- | --- | --- |
-| Q1 | Exact term appearing in a source | Identified passage with that fact | Correct term, incorrect passage |
-| Q2 | Paraphrase of Q1 | Same evidence despite different wording | Relevant passage missed |
-| Q3 | Relationship question, if supported | Explicit relationship and its passage | Invented connection |
-| Q4 | Question spanning nearby context | All necessary qualifiers and units | Chunk boundary removes context |
-| Q5 | Deliberately unanswerable question | Confirmed absence from selected corpus | Unsupported confident answer |
+| E1 | What starting settings could I try for a starry sky with a tripod, and how should I focus? | C01–C03: manual mode/tripod; conditional settings; distant-light manual focus | Missing focus or stability context; invented R1 specificity; missing/incorrect citations |
+| E2 | How can I photograph stars without streaks, and what exposure range does this guide suggest? | C02: Earth’s rotation/star trails, 10–20 seconds as an experiment | Guarantees no trails for every lens; invents an R1 maximum |
+| E3 | What exact EOS R1 menu buttons turn on remote shooting? | No supporting passage in pilot | Invents menu paths or claims the NPS source provides R1 instructions |
+| E4 | Should I use autofocus or focus on a faraway bright object for this setup? | C03: manually focus using distant bright light | Omits manual focus or invents an autofocus mode |
+| E5 | What shutter speed freezes a basketball player indoors? | Outside this pilot’s coverage | Reuses night-sky exposure values as sports guidance instead of acknowledging missing evidence |
+
+For each run preserve question, returned passage IDs/ranks, answer, citations, model, settings, outcome and date. Compare E1/E2 paraphrases against a keyword baseline. Passing citation-ID validation proves IDs exist, not that claims are supported. Review each claim against its cited passage.
+
+## Observable app stories — planned acceptance checks
+
+| Story | Observable check | Status |
+| --- | --- | --- |
+| Ask a typed night-sky question | Input produces a short checklist, explanations and inspectable source passages | Synthetic CLI plumbing observed via Megan’s output; real-source answer and website UI pending |
+| Ask for an unsupported R1 procedure | Answer states missing evidence; no invented menu path | One synthetic missing-settings case passed; real-source E3 pending |
+| Inspect a citation | ID resolves to the returned passage, original URL and section; unsupported IDs withhold answer | Five automated pipeline checks pass locally, including citation rejection and corpus separation; factual support still reviewed manually |
+| Encounter an API failure | Clear error without credentials or a fabricated answer | Mac certificate issue observed and corrected; quota/timeouts need controlled checks |
+| Import as owner | Only an authenticated owner may change the corpus; visitors cannot upload or replace it | Local hidden-key importer prepared; deployed owner authorization not implemented |
 
 ## Bounded comparisons
 
@@ -59,7 +75,13 @@ Query returned `status: ok`, 15 inference tokens and server-reported time 0.0775
 
 Read-only SSH connection succeeded using the existing course key and an already trusted host IP. Current snapshot: total memory 1967 MB; available 730 MB; no swap. An HTTPS request from that server to Qdrant without a key returned HTTP 403: network/TLS reachability worked, while authenticated access has not yet been demonstrated. No deployment-repository changes, server writes or service restarts were performed.
 
-**Next required input:** the saved API key must be entered into a private hidden prompt to complete an authenticated server test. Do not put it in chat or GitHub. The prepared local connection-check script sends it over SSH stdin without writing a server file.
+**Subsequent user-reported result:** Megan supplied HTTP 200/status ok with collection `photography_smoke_test` from the prepared authenticated server check. Keys were entered privately; none were shared in chat.
+
+## Combined synthetic retrieval and generation — executed, user-reported
+
+On November 14 Megan supplied the CLI output for the exact question: “What exact aperture, shutter speed and ISO should I use on a Canon EOS R1 for a starry sky?” Qdrant returned SYNTHETIC-01 first (0.39016587), SYNTHETIC-02 second (0.14912388), and SYNTHETIC-03 third (0.017931856). Groq `openai/gpt-oss-120b` generated an answer that cited SYNTHETIC-01 and explicitly declined exact settings because the passages lacked them. Citation-ID validation passed. Reported usage: 331 prompt tokens, 195 completion tokens, 526 total; provider total_time 0.431809615 seconds, not end-to-end latency.
+
+**Observed scope:** the synthetic integration and one missing-evidence behavior worked. No supported real-photography answer, hosted app, import authorization enforcement or broad reliability claim follows from this case. A separate Groq API test also returned HTTP 200 and acknowledged missing settings. Local automated tests use mock responses and do not count as live cloud tests.
 
 ## Remaining results log
 

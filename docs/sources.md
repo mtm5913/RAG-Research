@@ -66,7 +66,7 @@ These are the tutorials I used while learning about RAG. Dates, personal takeawa
 | PHOTO-02 | [Landscape Photography 101 — Canon New Zealand](https://www.canon.co.nz/get-inspired/landscape-photography-tips) | Aperture priority, depth of field, exposure compensation, ISO and tripod use. | Linked research reference; no public-RAG import authorization recorded. Not imported. |
 | PHOTO-03 | [6 Simple Low Light Photography Tips — Canon New Zealand](https://www.canon.co.nz/get-inspired/6-low-light-photography-tips) | Aperture, shutter speed, ISO, focusing and camera shake; handheld and tripod contexts. | Linked research reference; no public-RAG import authorization recorded. Not imported. |
 | PHOTO-04 | [Canon Explains Exposure: Basic Manual Settings — Canon Canada](https://www.canon.ca/CanonOutsideOfAuto/learn) | Basic aperture, shutter speed, ISO and exposure-meter explanations. | Linked research reference; import permission pending. Not imported. |
-| PHOTO-05 | [How to Photograph Acadia’s Night Skies — National Park Service](https://home.nps.gov/articles/000/night-skies-photography-acadia.htm) | Tripod-based night scenes, manual focus, long exposures and experimental starting settings. | NPS-created material is generally public domain, with exceptions. Verify text authorship and exclude third-party images before import. Not imported. |
+| PHOTO-05 | [How to Photograph Acadia’s Night Skies — National Park Service](https://home.nps.gov/articles/000/night-skies-photography-acadia.htm) | Tripod-based night scenes, manual focus, long exposures and experimental starting settings. | NPS-created material is generally public domain, with exceptions. Selected ranger-guidance prose reviewed against NPS ownership policy November 14. Three paraphrases prepared, excluding all images/captions/logos. Live import pending; see the source trace. |
 
 ### Source checks and limitations
 
@@ -80,7 +80,7 @@ These are the tutorials I used while learning about RAG. Dates, personal takeawa
 
 For each authorized source, retain document ID, title, publisher, original URL, edition/update date, access date, permission evidence, included sections and stable source locations. Extract article text rather than navigation, advertisements or photographs. Keep heading paths and passage IDs through cleaning and chunking; record duplicate handling, parser configuration, import date and embedding configuration when actually run.
 
-**Status:** five candidate documents identified; zero documents imported. Permission clearance and the manual’s edition remain open.
+**Status:** five candidate documents identified; zero real documents imported. PHOTO-05 prose pilot is prepared after attribution/ownership review. Canon import permissions and the manual’s edition remain open. [Review the real-source trace and planned evaluations](./experiments.md#real-source-trace-prepared-not-executed).
 
 ## Tutorial notes — template
 
