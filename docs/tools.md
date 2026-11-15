@@ -80,3 +80,7 @@ Groq does not retain inference inputs/outputs by default, but some features and 
 ## Verification required before selection
 
 Measure current host memory, disk and workload; benchmark query embedding and app memory with other services running; verify Qdrant region, authentication, persistence and inactivity behavior; verify provider Free eligibility, exact model ID and quotas; resolve source permissions including external processing. Then run the same evidence/citation questions on each viable candidate. Record failures, latency and resource observations. No performance tests, API requests, imports or deployments have been executed for this comparison.
+
+## Executed comparison supporting the current choice
+
+[Read the live retrieval and local chunking comparisons](./comparisons.md). On six answerable, purpose-selected questions, vector retrieval had macro recall@4 of 1.000 and the simple keyword baseline 0.833; the difference came from one deliberately lexical-mismatched challenge. This supports retaining vector retrieval provisionally, not a general superiority claim. The heading-associated passages preserved all twelve declared structural units with no duplication; fixed-window alternatives split some units. No alternative chunking was reindexed, and no graph database was benchmarked.

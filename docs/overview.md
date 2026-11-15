@@ -11,6 +11,7 @@
 | Sources and permissions | [Sources & tutorials](./sources.md) | Two NPS prose sources represented by seven checked paraphrases; Canon candidates remain permission-pending |
 | Exact questions, failures, changes and retests | [Experiments & checks](./experiments.md) | Synthetic and real-source results, three earlier evaluation rounds, constrained checklist and expanded-corpus browser checks |
 | Tools and resource tradeoffs | [Tools & hosting](./tools.md) | Qdrant Cloud MiniLM inference, Groq and a separate course-server container |
+| Executed retrieval/chunking comparisons | [Comparison results](./comparisons.md) | Live vector vs keyword comparison and local tokenizer/boundary comparison, with raw evidence and limits |
 | Outstanding work | [Next steps](./roadmap.md) | Baseline/chunk comparisons, broader evaluation and independent source review remain |
 
 ## Purpose and bounded scope
@@ -29,7 +30,7 @@ A separate Fieldlight container now runs on the course server behind its existin
 
 - **Changed:** Defined a photography purpose; compared approaches and tools; prepared permitted prose; built the local interface and separate hosted foundation; replaced unconstrained answers after observing grounding failures.
 - **Checked:** 21 local pipeline tests and 10 HTTP tests; bounded local live browser cases; public HTTPS, supported waterfall answer, citation expansion and R1-procedure refusal. User-reported results are distinguished from AI-executed checks in the record.
-- **Next:** Complete a keyword baseline and bounded chunking comparison; broaden repeated answer/retrieval evaluation; independently verify source paraphrases and explain the decisions in my own words. A working foundation does not complete every research or release requirement.
+- **Next:** Broaden the completed retrieval comparison and run retrieval on alternative chunkings; repeat answer evaluation; independently verify source paraphrases and explain the decisions in my own words. A working foundation does not complete every research or release requirement.
 
 ## Help and contribution
 

@@ -4,13 +4,13 @@
 
 [Fieldlight is hosted](https://fieldlight.megan373lab.xyz) separately from this VitePress notebook. Its bounded corpus has two NPS prose sources and seven paraphrase passages. The app answers typed questions with checked checklist wording, expandable source evidence and explicit insufficient-evidence behavior. Public HTTPS and two public answer cases have been checked; wider reliability is not established.
 
-## 1. Compare retrieval with a baseline
+## 1. Extend the completed retrieval comparison
 
-Run the same exact-term and paraphrased questions against a simple keyword baseline and Qdrant. Save rankings, returned IDs and expected evidence. Four-of-seven retrieval is selective, but a small successful set alone does not show the vector approach is better. Explain tradeoffs and failures before adding a graph.
+[The first paired comparison is complete](./comparisons.md): six answerable questions and one unsupported question, with an explicit lexical-mismatch challenge. Next, use a stronger lexical baseline and independent held-out questions. Save rankings, returned IDs and expected evidence. Four-of-seven retrieval is selective, but a small successful set alone does not show the vector approach is better. Explain tradeoffs and failures before adding a graph.
 
-## 2. Compare chunk boundaries
+## 2. Follow the structural chunk check with retrieval tests
 
-Compare heading-based passages with a bounded alternative using the same authorized prose and question set. Verify actual tokenizer lengths rather than assuming word counts are token counts. Preserve source URLs, sections, representation labels and conditional context. The current hand-prepared chunks are not evidence that the best strategy has been found.
+[The local tokenizer/boundary check is complete](./comparisons.md#_2-heading-passages-versus-fixed-token-windows): current passages versus two fixed-window variants. No alternate vector index was created. Next, compare retrieval on those alternatives using the same authorized prose and question set. Verify actual tokenizer lengths rather than assuming word counts are token counts. Preserve source URLs, sections, representation labels and conditional context. The current hand-prepared chunks are not evidence that the best strategy has been found.
 
 ## 3. Broaden answer and scope checks
 
