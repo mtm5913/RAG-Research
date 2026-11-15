@@ -75,4 +75,4 @@ The no-overlap version split the settings, release and golden-hour fact units, p
 
 - **Changed:** added a reproducible keyword baseline, live paired retrieval comparison, tokenizer-based structural comparison and raw evidence downloads.
 - **Checked:** seven live queries; six answerable paired retrieval cases; one unsupported-query case; all returned passage texts/URLs matched the local manifest; three chunk representations evaluated against twelve declared units.
-- **Next:** stronger lexical baseline, independent held-out questions, separate indexes for alternative chunkings and larger authorized documents. Megan still needs to verify the notes independently and record personal takeaways. These AI-executed results do not substitute for that work.
+- **Next:** stronger lexical baseline, independent held-out questions, separate indexes for alternative chunkings and larger authorized documents. [Megan’s personal takeaways are now recorded](./research.md#my-takeaways-from-the-technical-research-and-checks). Independent verification and her proposed new source-support check remain separate from these AI-executed results.

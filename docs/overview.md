@@ -30,7 +30,7 @@ A separate Fieldlight container now runs on the course server behind its existin
 
 - **Changed:** Defined a photography purpose; compared approaches and tools; prepared permitted prose; built the local interface and separate hosted foundation; replaced unconstrained answers after observing grounding failures.
 - **Checked:** 21 local pipeline tests and 10 HTTP tests; bounded local live browser cases; public HTTPS, supported waterfall answer, citation expansion and R1-procedure refusal. User-reported results are distinguished from AI-executed checks in the record.
-- **Next:** Broaden the completed retrieval comparison and run retrieval on alternative chunkings; repeat answer evaluation; independently verify source paraphrases and explain the decisions in my own words. A working foundation does not complete every research or release requirement.
+- **Next:** Broaden the completed retrieval comparison and run retrieval on alternative chunkings; repeat answer evaluation; independently verify relevant claims and carry out the proposed new source-support check. [My explanations of the choices are recorded](./research.md#my-takeaways-from-the-technical-research-and-checks). A working foundation does not complete every research or release requirement.
 
 ## Help and contribution
 
