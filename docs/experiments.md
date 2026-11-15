@@ -1,6 +1,6 @@
 # Experiments & checks
 
-**Status:** a real, isolated Qdrant embedding/retrieval smoke test was executed November 14, 2026. Megan subsequently supplied successful terminal output for Qdrant authentication, Groq generation and the combined synthetic retrieval/generation pipeline. These are user-reported executed results. The real-source import and evaluations below are prepared but not executed.
+**Status:** a real, isolated Qdrant embedding/retrieval smoke test was executed November 14, 2026. Megan subsequently supplied successful terminal output for Qdrant authentication, Groq generation and the combined synthetic retrieval/generation pipeline. These are user-reported executed results. Megan also supplied a real-source pilot response. The five-case evaluation suite remains planned; the single observed real-source case is reviewed below.
 
 ## Real-source trace — prepared, not executed
 
@@ -14,7 +14,7 @@
 
 **Expected evidence:** C01 for tripod/manual mode, C02 for experimental aperture/ISO/exposure suggestions and star trails, C03 for manual focus using a distant bright light. A proposed answer can give those general starting points with passage citations; it must say they are conditional NPS guidance, not tested R1 settings. A missing C03 would reveal incomplete evidence for focus. A confident R1-specific guarantee would exceed this source.
 
-**Import status:** source manifest and importer prepared locally; no real-source import result observed yet. No real-source answer is claimed.
+**Import status:** Megan’s subsequent successful query returned all three real-source passages from the separate pilot collection. This demonstrates those indexed passages were available to retrieval; a separate importer output was not supplied. The real-source response is reviewed below.
 
 ## Exact evaluation questions — planned
 
@@ -34,7 +34,7 @@ For each run preserve question, returned passage IDs/ranks, answer, citations, m
 | --- | --- | --- |
 | Ask a typed night-sky question | Input produces a short checklist, explanations and inspectable source passages | Synthetic CLI plumbing observed via Megan’s output; real-source answer and website UI pending |
 | Ask for an unsupported R1 procedure | Answer states missing evidence; no invented menu path | One synthetic missing-settings case passed; real-source E3 pending |
-| Inspect a citation | ID resolves to the returned passage, original URL and section; unsupported IDs withhold answer | Five automated pipeline checks pass locally, including citation rejection and corpus separation; factual support still reviewed manually |
+| Inspect a citation | ID resolves to the returned passage, original URL and section; unsupported IDs withhold answer | Seven automated pipeline checks pass locally, including citation rejection and corpus separation; factual support still reviewed manually |
 | Encounter an API failure | Clear error without credentials or a fabricated answer | Mac certificate issue observed and corrected; quota/timeouts need controlled checks |
 | Import as owner | Only an authenticated owner may change the corpus; visitors cannot upload or replace it | Local hidden-key importer prepared; deployed owner authorization not implemented |
 
@@ -81,8 +81,18 @@ Read-only SSH connection succeeded using the existing course key and an already 
 
 On November 14 Megan supplied the CLI output for the exact question: “What exact aperture, shutter speed and ISO should I use on a Canon EOS R1 for a starry sky?” Qdrant returned SYNTHETIC-01 first (0.39016587), SYNTHETIC-02 second (0.14912388), and SYNTHETIC-03 third (0.017931856). Groq `openai/gpt-oss-120b` generated an answer that cited SYNTHETIC-01 and explicitly declined exact settings because the passages lacked them. Citation-ID validation passed. Reported usage: 331 prompt tokens, 195 completion tokens, 526 total; provider total_time 0.431809615 seconds, not end-to-end latency.
 
-**Observed scope:** the synthetic integration and one missing-evidence behavior worked. No supported real-photography answer, hosted app, import authorization enforcement or broad reliability claim follows from this case. A separate Groq API test also returned HTTP 200 and acknowledged missing settings. Local automated tests use mock responses and do not count as live cloud tests.
+**Observed scope:** the synthetic integration and one missing-evidence behavior worked. No hosted app, import authorization enforcement or broad reliability claim follows from this synthetic case. A separate Groq API test also returned HTTP 200 and acknowledged missing settings. Local automated tests use mock responses and do not count as live cloud tests.
 
 ## Remaining results log
 
 For each further exercise save date, source, question, configuration, expected evidence, actual observation, explanation, limitation, and next step. Keep app performance and answer-quality claims separate from this bounded plumbing test.
+
+## Real-source pilot — executed, user-reported
+
+**November 14, 2026.** Megan supplied the `--real` CLI output for the default exact EOS R1 starry-sky settings question. Retrieved passages: PHOTO-05-C02 first (0.65089595), C01 second (0.5213499), C03 third (0.37628973), each retaining original URL and section. Groq returned a generated answer citing C02, labeled the guidance as general experimental starting points rather than an R1-specific recipe, and listed f/1.4–f/3.5, ISO 400 and 10–20 seconds. Usage: 660 prompt tokens, 328 completion tokens, 988 total; provider total_time 0.718832268 seconds is not end-to-end latency.
+
+**Review:** retrieval and citation-ID checks succeeded. The numbers match the reviewed NPS paraphrase, but answer quality needs improvement: “longer times will start to show star trails” overstates a conditional risk, and the answer omitted the tripod context attached to the exposure suggestions. It added lens/sky-brightness/desired-effect qualifiers that were not all explicit in the indexed text. This is a partial answer-quality result, not an unqualified pass.
+
+**Change:** prompt now requires conditional star-trail wording, tripod context for long night-sky exposures, no unstated explanations and a clear distinction between general guidance and exact R1 instructions. This revised prompt has not yet been retested live. Seven local mock-based pipeline tests pass; those do not measure answer quality.
+
+**Next:** run the prepared five-question evaluation suite, including focus, unsupported R1 menu instructions and an out-of-domain sports question. Returned-ID inclusion is checked automatically; factual support and refusal behavior require review. Because the pilot has only three passages and retrieval requests all three, this does not establish selective retrieval quality. Expand the authorized corpus and compare rankings with a keyword baseline before making such a claim.
