@@ -1,0 +1,99 @@
+- banner:
+  - link "Fieldlight home":
+    - /url: /
+    - generic: ✳
+    - text: fieldlight
+    - generic: .
+  - text: PHOTOGRAPHY ASSISTANT
+  - text: PROTOTYPE
+  - generic: ● Live · Qdrant + Groq
+- main:
+  - generic: LESS GUESSWORK. MORE EXPLORING.
+  - heading "A little light on your next shot." [level=1]:
+    - text: A little light on
+    - text: your next
+    - emphasis: shot.
+  - paragraph:
+    - text: Ask about your settings. Understand the why.
+    - text: Keep the source in sight.
+  - generic: Night skies
+  - generic: Landscapes
+  - generic: Tripod-based
+  - generic: General guidance
+  - region "What are you trying to capture?":
+    - generic: 01 / ASK
+    - generic: YOUR NEXT SHOT STARTS HERE
+    - heading "What are you trying to capture?" [level=2]
+    - generic: Your photography question
+    - textbox "Your photography question":
+      - /placeholder: I’m photographing a starry sky with a tripod. Where should I start with my settings?
+      - text: What starting exposure settings could I try for a starry sky with a tripod?
+    - generic: 75 / 1,000
+    - button "Find guidance": Find guidance ↗
+    - text: OR EXPLORE A SAVED EXAMPLE
+    - button "Starry-sky checklist ↗"
+    - button "R1 menu question ↗"
+    - button "Outside the source ↗"
+    - paragraph: Saved examples replay an earlier test, including its limitations. They make no live AI requests.
+  - complementary "A small field guide. A clear starting point.":
+    - generic: ✦
+    - generic: ✧
+    - generic: ·
+    - generic: ✦
+    - generic: LOOK UP. SLOW DOWN.
+    - text: IN YOUR FIELD GUIDE
+    - heading "A small field guide. A clear starting point." [level=2]:
+      - text: A small field guide.
+      - text: A clear starting point.
+    - paragraph: "Two NPS guides cover night-sky experiments and landscape fundamentals: waterfall blur, aperture, composition and golden-hour light. General guidance, not EOS R1 procedures."
+    - link "Night-sky source":
+      - /url: https://home.nps.gov/articles/000/night-skies-photography-acadia.htm
+      - text: Night-sky source ↗
+    - link "Landscape fundamentals ↗":
+      - /url: https://home.nps.gov/articles/photographyguide.htm
+    - strong: "02"
+    - text: articles
+    - strong: "07"
+    - text: passages
+  - region "Your starting point":
+    - generic: 02 / EXPLORE
+    - generic: LIVE RESPONSE
+    - heading "Your starting point" [level=2]
+    - paragraph: What starting exposure settings could I try for a starry sky with a tripod?
+    - generic: ✳
+    - paragraph: General photography guidance paraphrased from NPS. Not verified EOS R1 procedures or guaranteed settings. Night-sky long exposures assume a tripod.
+    - paragraph: General NPS photography guidance, paraphrased; starting points to explore, not a verified EOS R1 recipe.
+    - list:
+      - strong: "Equipment:"
+      - text: For basic night-sky photography, the NPS article lists a digital camera with manual controls, a wide-angle lens and a sturdy tripod.
+      - button "Read passage PHOTO-05-C01": PHOTO-05-C01
+      - strong: "Mode:"
+      - text: It recommends manual shooting mode.
+      - button "Read passage PHOTO-05-C01": PHOTO-05-C01
+      - strong: "Experimental settings:"
+      - text: NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds.
+      - button "Read passage PHOTO-05-C02": PHOTO-05-C02
+      - strong: "Star trails:"
+      - text: Longer exposures can produce star trails as Earth rotates.
+      - button "Read passage PHOTO-05-C02": PHOTO-05-C02
+      - strong: "White balance and release:"
+      - text: NPS suggests automatic white balance and a two-to-five-second self-timer, a remote release, or a compatible smartphone.
+      - button "Read passage PHOTO-05-C03": PHOTO-05-C03
+      - strong: "Focus:"
+      - text: With camera and tripod positioned, manually focus using a distant bright light, such as a star, streetlight or house.
+      - button "Read passage PHOTO-05-C03": PHOTO-05-C03
+    - paragraph: For tripod-based night-sky experiments only. The suggested exposure range does not guarantee the absence of star trails.
+    - paragraph: Checklist text comes from checked source-derived paraphrases. Review relevance, completeness and the original source; selected evidence can still be incomplete or inappropriate.
+    - heading "Keep the evidence in sight" [level=3]
+    - generic: 4 passages
+    - paragraph: These passages are paraphrases, not original quotations. Expand a passage to compare the answer with its evidence.
+    - generic "PHOTO-05-C02 · Set Up (suggested settings)" [active]
+    - paragraph: NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. Longer exposures can produce star trails as Earth rotates.
+    - link "Open original NPS article ↗":
+      - /url: https://home.nps.gov/articles/000/night-skies-photography-acadia.htm
+    - generic "PHOTO-05-C01 · Equipment List; Set Up (manual mode)"
+    - generic "PHOTO-06-C02 · Adjust Your Settings — Shutter speed"
+    - generic "PHOTO-05-C03 · Set Up (white balance, release and focus)"
+  - status
+  - generic: fieldlight. A photography research prototype.
+  - generic: Made for curiosity. Grounded in sources.

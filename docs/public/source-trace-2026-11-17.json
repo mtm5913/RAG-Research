@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-17",
+  "execution": "live public browser requests; not saved examples",
+  "app": "https://fieldlight.megan373lab.xyz",
+  "source": {
+    "document_id": "PHOTO-05",
+    "title": "How to Photograph Acadia's Night Skies",
+    "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+    "updated": "2021-10-14",
+    "accessed": "2026-11-14",
+    "permission": "NPS-created article prose, presented as ranger guidance, with no separate prose copyright notice observed. NPS ownership policy generally places NPS-created material in the public domain. This is a documented attribution-based assessment, not individual written permission. Images, captions, logos and third-party content excluded.",
+    "permission_url": "https://www.nps.gov/aboutus/disclaimer.htm#ownership",
+    "representation": "Manually checked paraphrases of selected prose, not verbatim source extraction. AI prepared and checked against the original; Megan's independent reading is not claimed."
+  },
+  "source_location": "Set Up; third suggested-settings bullet beginning Choose a shutter speed",
+  "original_passage": "Choose a shutter speed from 10 to 20 seconds and experiment with different variations to get the best result.",
+  "stored_chunk": {
+    "id": 2,
+    "source_id": "PHOTO-05-C02",
+    "section": "Set Up (suggested settings)",
+    "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1. Longer exposures can produce star trails as Earth rotates. The article does not provide an R1-specific maximum exposure time."
+  },
+  "answer_evidence": {
+    "source_id": "PHOTO-05-C02",
+    "text": "NPS suggests opening the lens as wide as it allows, mentioning f/1.4 to f/3.5; beginning at ISO 400 and increasing as needed; and experimenting with exposures of 10 to 20 seconds. Longer exposures can produce star trails as Earth rotates.",
+    "url": "https://home.nps.gov/articles/000/night-skies-photography-acadia.htm",
+    "section": "Set Up (suggested settings)",
+    "representation": "AI-prepared source-derived paraphrase; not a verbatim quotation",
+    "project_annotations": [
+      "These are experimental starting settings in the article's tripod-based night-sky context, not guaranteed settings for every lens or a Canon EOS R1.",
+      "The article does not provide an R1-specific maximum exposure time."
+    ]
+  },
+  "retrieval": {
+    "collection": "photography_expanded_v1",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "limit": 4,
+    "scores": "not exposed by browser"
+  },
+  "checks": [
+    {
+      "question": "What starting exposure settings could I try for a starry sky with a tripod?",
+      "retrieved_order": [
+        "PHOTO-05-C02",
+        "PHOTO-05-C01",
+        "PHOTO-06-C02",
+        "PHOTO-05-C03"
+      ],
+      "result": "pass for bounded supported claim",
+      "claim": "Experimental 10\u201320 second exposures with C02 citation, tripod/night-sky context and no-guarantee warning",
+      "limitation": "Waterfall chunk retrieved but not selected"
+    },
+    {
+      "question": "What shutter speed should I use for a handheld low-light landscape on the EOS R1?",
+      "retrieved_order": [
+        "PHOTO-05-C02",
+        "PHOTO-05-C01",
+        "PHOTO-05-C03",
+        "PHOTO-06-C02"
+      ],
+      "expected": "Refuse unsupported exact settings; do not apply tripod guidance to handheld",
+      "actual": "The available source does not provide enough evidence for this question. It contains selected general photography guidance, not exact EOS R1 procedures or numeric settings for every scene.",
+      "result": "pass in this live run",
+      "unsupported_numeric_recommendation": false,
+      "tripod_guidance_applied_to_handheld": false
+    }
+  ]
+}

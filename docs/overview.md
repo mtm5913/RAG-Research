@@ -2,6 +2,8 @@
 
 **2. Individual RAG app + technical research — evolving individual record, updated November 14, 2026.** This notebook is separate from the portfolio research site. Link it under section 2 of the existing combined individual record; it is not an additional submission report.
 
+[Executed passage-to-answer trace and handheld evaluation →](./source-trace)
+
 ## Start here
 
 | Evidence | Where to find it | Current status |

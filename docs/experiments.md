@@ -217,3 +217,7 @@ The separate Compose project uses 0.25 CPU and a 192 MiB cap on the existing cou
 **Next:** Identify original articles by title in evidence links and investigate exclusion or clear labeling of irrelevant retrieved passages. Those improvements and a subsequent relevance retest have not been implemented or executed in this verification session.
 
 **Scope and help:** Megan performed the final settings-to-original-source comparison after AI helped locate the correct article. This completes this specific personal source check, not independent verification of all technical research, every answer claim, or the entire evaluation suite.
+
+## Reviewer-requested source trace — executed November 17
+
+[Read the original passage → chunk metadata → live retrieval → supported answer trace and handheld evaluation](./source-trace). Both bounded live checks passed; the irrelevant waterfall retrieval remains documented. No Canon source was imported for these checks.
