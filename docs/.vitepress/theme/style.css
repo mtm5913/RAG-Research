@@ -21,3 +21,16 @@
 .dark .research-home .role-card:hover{background:#344b59}
 .dark .research-board{background:#2b404d;color:#e7eff2;border-color:#49616e;filter:none}
 .dark .note{color:#344b59}
+
+/* Peer feedback, 2026-11-16: readable headlines and process text. */
+.research-home .hero{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.research-home .hero h1{letter-spacing:normal;word-spacing:.04em;line-height:1.25}
+.research-home .hero h1 em{letter-spacing:normal}
+.research-home .research-board{display:flex;flex-direction:column;height:auto;min-height:360px}
+.research-home .board-question{margin-top:28px}
+.research-home .note{position:relative;top:auto;right:auto;align-self:flex-end;margin:16px 0 24px}
+.research-home .board-bottom{position:relative;inset:auto;display:block;margin-top:auto;font-size:14px;line-height:1.7;letter-spacing:.02em;overflow-wrap:break-word}
+@media(max-width:760px){
+ .research-home .hero{grid-template-columns:minmax(0,1fr)}
+ .research-home .hero h1{font-size:clamp(32px,8vw,40px)}
+}
