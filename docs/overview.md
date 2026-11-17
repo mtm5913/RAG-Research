@@ -49,4 +49,6 @@ Megan chose the application focus, intended users, initial camera/topics, vector
 
 **Help and limits:** AI made the CSS changes, drafted this record and performed the browser/build checks at Megan’s request. The peer supplied the original feedback; these follow-up checks are not a peer retest or a comprehensive accessibility audit. No new employer-source review or RAG answer-quality test is claimed by this visual change.
 
-**Next:** Ask the peer to inspect the updated live page and record their actual response when available. Deployment and issue resolution evidence belongs in the linked GitHub issue; do not treat planned peer confirmation as completed.
+**Peer follow-up — November 16, 2026:** Megan relayed the peer’s response to the updated homepages: “Yeah that looks much better”. This confirms the peer perceived an improvement after the typography changes. The response did not specify a device, browser, zoom level, or separate test of each text element, so those details are not claimed.
+
+**Decision / next:** Keep the revised typography. Peer confirmation is now recorded; no additional change was requested in this response. Deployment and issue-resolution evidence remains in the linked GitHub issue. Recheck readability if the homepage layout or wording changes.
