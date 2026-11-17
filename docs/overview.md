@@ -52,3 +52,8 @@ Megan chose the application focus, intended users, initial camera/topics, vector
 **Peer follow-up — November 16, 2026:** Megan relayed the peer’s response to the updated homepages: “Yeah that looks much better”. This confirms the peer perceived an improvement after the typography changes. The response did not specify a device, browser, zoom level, or separate test of each text element, so those details are not claimed.
 
 **Decision / next:** Keep the revised typography. Peer confirmation is now recorded; no additional change was requested in this response. Deployment and issue-resolution evidence remains in the linked GitHub issue. Recheck readability if the homepage layout or wording changes.
+
+
+## Personal source verification — November 17, 2026
+
+Megan checked the app’s night-sky settings against the original Acadia article and confirmed they match. She also noticed an unrelated moving-water passage and confusing source-link labels. [Verification record, decision and planned improvements](./experiments.md#personal-source-verification). This specific personal check is complete; broader research verification is not claimed.

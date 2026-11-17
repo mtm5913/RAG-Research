@@ -202,3 +202,18 @@ The separate Compose project uses 0.25 CPU and a 192 MiB cap on the existing cou
 ## Retrieval and chunking comparisons — executed
 
 [Open the comparison report, exact inputs, raw outputs and reproduction scripts](./comparisons.md). AI ran seven questions through the hosted app and paired their returned passage rankings with a local exact-token baseline. Six answerable cases contributed to metrics; the unsupported R1 procedure was not assigned recall. Separately, actual MiniLM tokenization compared current heading-associated passages with 64-token windows, with and without overlap. This was a structural check, not an alternate-index retrieval test. Corpus hashes, tokenizer revision, methods, observations, decisions and remaining checks are recorded in the report. Megan's independent source verification and personal learning takeaways are still pending.
+
+
+## Megan’s source verification — November 17, 2026 {#personal-source-verification}
+
+**Question entered:** “what camera settings should i have if i want to see the most amount of stars when i take a picture”. Megan supplied the actual displayed answer and its four retrieved passages. This is user-reported app output, not a newly executed AI test.
+
+**Initial observation:** Megan opened the Beginner’s Photography Guide and could not locate the specific night-sky numbers there. She also identified PHOTO-06-C02 about moving water as unrelated to the question. AI checked both original NPS articles and explained that PHOTO-05-C01–C03 derive from a different article, [How to Photograph Acadia’s Night Skies](https://home.nps.gov/articles/000/night-skies-photography-acadia.htm).
+
+**Personal check and result:** After locating the Acadia article’s **Set Up** section, Megan confirmed: “those answers match”. The comparison concerned aperture f/1.4–f/3.5, ISO starting at 400 and increasing as needed, and experimental exposures of 10–20 seconds. These settings are supported by that source as starting points; this check does not establish optimal settings for maximizing visible stars or verified EOS R1 procedures.
+
+**Decision:** Retain those source-supported settings with their conditional wording. Record the moving-water passage as an irrelevant retrieval result; it was displayed in the evidence list but was not used in the supplied answer checklist. The initial source confusion also indicates that identical “Open original NPS article” labels make the two articles hard to distinguish.
+
+**Next:** Identify original articles by title in evidence links and investigate exclusion or clear labeling of irrelevant retrieved passages. Those improvements and a subsequent relevance retest have not been implemented or executed in this verification session.
+
+**Scope and help:** Megan performed the final settings-to-original-source comparison after AI helped locate the correct article. This completes this specific personal source check, not independent verification of all technical research, every answer claim, or the entire evaluation suite.

@@ -124,3 +124,6 @@ I would test whether the app is making things up. Even if it provides citations,
 - [Observed answer failures and retests](./experiments.md): why valid citation IDs alone were not sufficient.
 
 **Changed / checked / next:** added my own explanations of the choices and limits; linked them to source notes and actual results; kept my proposed trust check separate from executed tests. Remaining work includes independent verification of technical explanations and the new source-support check. AI-authored clarifications remain labeled as such.
+
+
+**Personal source-check update — November 17, 2026:** Megan compared the app’s night-sky aperture, ISO and exposure suggestions with the original Acadia article’s Set Up section and confirmed they match. She also identified an unrelated moving-water passage and difficulty distinguishing the original-source links. [Read the question, observations, result, decision and remaining work](./experiments.md#personal-source-verification). This supplies a concrete personal check; broader verification of technical explanations remains separate.
